@@ -1,0 +1,242 @@
+[
+ {
+  "id": "giftbasket",
+  "category": "beauty",
+  "title": "BodyRefresh Self-Care Gift Basket",
+  "description": "Blanket, 40oz tumbler, socks, candle and spa extras in a gift box. Clip the on-page coupon, then try promo code CLXKBLN4 at checkout while it lasts."
+ },
+ {
+  "id": "lancome",
+  "category": "beauty",
+  "title": "Lancôme La Vie Est Belle Eau de Parfum, 1.7 oz",
+  "description": "Iris, patchouli and warm vanilla. A holiday gift or a treat for yourself."
+ },
+ {
+  "id": "q10",
+  "category": "home",
+  "title": "Roborock Q10 S5+ Robot Vacuum & Mop",
+  "description": "10,000Pa suction, self-emptying for up to 70 days, vacuums and mops with smart obstacle avoidance."
+ },
+ {
+  "id": "shark",
+  "category": "home",
+  "title": "Shark Navigator Lift-Away Vacuum",
+  "description": "HEPA filtration, light to carry, swivel steering for carpets, rugs and hard floors."
+ },
+ {
+  "id": "bambusi",
+  "category": "home",
+  "title": "Bambüsi Charcuterie Board Gift Set",
+  "description": "A hosting set for the holidays. Look for a coupon box on the Amazon page and clip it before checkout."
+ },
+ {
+  "id": "fire",
+  "category": "tech",
+  "title": "Amazon Fire HD 10 Tablet, 32GB",
+  "description": "10.1-inch Full HD screen for streaming and reading. The deal is for the black 32GB version with lockscreen ads."
+ },
+ {
+  "id": "qrevo",
+  "category": "home",
+  "title": "Roborock Qrevo 2 Pro Robot Vacuum & Mop",
+  "description": "20,000Pa suction, a self-cleaning mop with edge mopping, and obstacle avoidance for pet hair."
+ },
+ {
+  "id": "bose",
+  "category": "tech",
+  "title": "Bose Smart Ultra Soundbar, White",
+  "description": "Dolby Atmos sound, Alexa and Google voice control, and HDMI eARC."
+ },
+ {
+  "id": "sony",
+  "category": "tech",
+  "title": "Sony Alpha a7 III Full-Frame Mirrorless Camera Kit",
+  "description": "24.2MP full-frame sensor, 4K video and up to 10 frames per second."
+ },
+ {
+  "id": "snowjoe",
+  "category": "home",
+  "title": "Snow Joe Premium Enviro Blend Ice Melt, 50 lb",
+  "description": "Works down to -10°F and is formulated to be gentler on concrete and paws. Get ready before the snow."
+ },
+ {
+  "id": "tarte",
+  "category": "beauty",
+  "title": "Tarte smolderEYES Waterproof Shadow Liner",
+  "description": "Eyeliner and cream eyeshadow in one stick, with a built-in smudger."
+ },
+ {
+  "id": "ysl",
+  "category": "beauty",
+  "title": "YSL Libre L’Eau Nue Perfume, 3 oz",
+  "description": "A gift-ready fragrance for the Thanksgiving and holiday shopping list."
+ },
+ {
+  "id": "armani",
+  "category": "beauty",
+  "title": "Giorgio Armani My Way Eau de Parfum, 3 oz",
+  "description": "A citrus floral with bergamot, jasmine and vanilla."
+ },
+ {
+  "id": "chi",
+  "category": "beauty",
+  "title": "CHI Spin N Curl 1″ Ceramic Rotating Curling Iron, Ruby Red",
+  "description": "Automatic rotating curls in either direction, heats up to 410°F."
+ },
+ {
+  "id": "rockare",
+  "category": "home",
+  "title": "Rockare Under-Desk Walking Pad",
+  "description": "Incline and decline settings, a quiet 2.5HP motor and a compact frame. Check the page for a coupon box."
+ },
+ {
+  "id": "ottocast",
+  "category": "baby",
+  "title": "OTTOCAST Baby Car Camera with Wireless CarPlay Adapter",
+  "description": "1080P split-screen view and night vision with no extra screen. Needs a compatible Apple CarPlay setup, not Android."
+ },
+ {
+  "id": "graco",
+  "category": "baby",
+  "title": "Graco 4Ever DLX 4-in-1 Convertible Car Seat",
+  "description": "Rear-facing, forward-facing, highback and backless booster modes. Follow the seat’s age, height and weight limits."
+ },
+ {
+  "id": "socks",
+  "category": "baby",
+  "title": "Sesame Street Socks, 6-Pack (Size S)",
+  "description": "Six pairs of Sesame Street quarter socks for little ones. The deal applies to the selected size and style."
+ },
+ {
+  "id": "orgain",
+  "category": "essentials",
+  "title": "Orgain Organic Vegan Protein Powder, Variety Pack",
+  "description": "10 single-serve packets in 5 flavors, 21g plant protein, no added sugar. Subscribe & Save may apply."
+ },
+ {
+  "id": "fairlife",
+  "category": "essentials",
+  "title": "Fairlife Core Power Elite Chocolate Protein Shakes, 12-Pack",
+  "description": "42g of protein per bottle. Check the page for Subscribe & Save and first-delivery coupons."
+ },
+ {
+  "id": "b12",
+  "category": "essentials",
+  "title": "Nature Made Vitamin B12 5000 mcg, 60 Softgels",
+  "description": "Check the page for Subscribe & Save and coupon options."
+ },
+ {
+  "id": "airtag",
+  "category": "tech",
+  "title": "Apple AirTag 4-Pack (2nd Generation)",
+  "description": "Track keys, bags and wallets, play a sound to find them, and use Precision Finding."
+ },
+ {
+  "id": "astercook",
+  "category": "home",
+  "title": "Astercook 3-Piece Bamboo Cutting Board Set",
+  "description": "Three reversible boards with juice grooves and a wooden storage stand."
+ },
+ {
+  "id": "sonytv",
+  "category": "tech",
+  "title": "Sony BRAVIA 5 98″ Mini LED 4K Google TV",
+  "description": "120Hz refresh rate, Dolby Vision and Dolby Atmos. Great for PS5."
+ },
+ {
+  "id": "bounty",
+  "category": "essentials",
+  "title": "Bounty Essentials Paper Towels, 6 Double Rolls",
+  "description": "Stock up on household basics. Check the page for Subscribe & Save and order-size savings."
+ },
+ {
+  "id": "celsius",
+  "category": "essentials",
+  "title": "Celsius Spritz Vibe Sparkling Limoncello Twist, 12-Pack",
+  "description": "Zero sugar. Check the page for a coupon and Subscribe & Save."
+ },
+ {
+  "id": "scott",
+  "category": "essentials",
+  "title": "Scott ComfortPlus Toilet Paper, 48 Triple Rolls",
+  "description": "Stock up on everyday essentials. Look for Subscribe & Save and a first-delivery coupon."
+ },
+ {
+  "id": "stanley",
+  "category": "home",
+  "title": "Stanley 40 oz Tumbler with Straw, Peony Pink",
+  "description": "Double-wall insulated and cup-holder friendly."
+ },
+ {
+  "id": "freaire",
+  "category": "home",
+  "title": "FreAire Large Room Air Purifier (HAP605)",
+  "description": "HEPA filtration for rooms up to 2,600 sq ft, with a quiet 20 dB sleep mode. Great for homes with pets."
+ },
+ {
+  "id": "dyson",
+  "category": "home",
+  "title": "Dyson V9 Motorbar Cordless Vacuum",
+  "description": "Cordless convenience and powerful everyday cleaning."
+ },
+ {
+  "id": "taseven",
+  "category": "home",
+  "title": "Taseven Extra-Large Electric Food Warming Mat",
+  "description": "6 temperature settings and a 6-hour timer. Check the coupon box before checkout."
+ },
+ {
+  "id": "keurig",
+  "category": "home",
+  "title": "Keurig K-Express Coffee Maker",
+  "description": "3 brew sizes, a 42 oz removable reservoir and a strong brew feature."
+ },
+ {
+  "id": "lenovo499",
+  "category": "tech",
+  "title": "Lenovo V15 Business Laptop, 256GB SSD + 500GB HDD",
+  "description": "15.6″ Full HD display, 8GB DDR5 RAM and Wi-Fi 6."
+ },
+ {
+  "id": "lenovo459",
+  "category": "tech",
+  "title": "Lenovo V15 Business Laptop, 256GB SSD",
+  "description": "15.6″ Full HD display, 8GB DDR5 RAM and Wi-Fi 6."
+ },
+ {
+  "id": "ninja",
+  "category": "home",
+  "title": "Ninja Kitchen System with BlendSense Technology",
+  "description": "72 oz blender and 8-cup food processor, 1800 peak watts. Early Black Friday."
+ },
+ {
+  "id": "norton",
+  "category": "tech",
+  "title": "Norton 360 Deluxe Antivirus, 1-Year",
+  "description": "Protection for up to 3 devices with VPN, scam protection and 25 GB cloud backup. The subscription auto-renews."
+ },
+ {
+  "id": "ring",
+  "category": "tech",
+  "title": "Ring Doorbell 2K",
+  "description": "A 2K video doorbell. Open the Amazon page for the exact model and today’s price."
+ },
+ {
+  "id": "sonyhp",
+  "category": "tech",
+  "title": "Sony WH-CH720N Wireless Noise-Canceling Headphones, Pink",
+  "description": "Noise canceling with up to 35 hours of battery life, lightweight and comfortable."
+ },
+ {
+  "id": "chefman",
+  "category": "home",
+  "title": "Chefman TurboFry 6-Qt Air Fryer",
+  "description": "Family-size 6-quart basket, up to 450°F for extra crispy results with less oil."
+ },
+ {
+  "id": "yankee",
+  "category": "home",
+  "title": "Yankee Candle Large Jar",
+  "description": "A cozy pick for fall and holiday gifting. Open the Amazon page to see scents."
+ }
+]

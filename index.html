@@ -144,6 +144,57 @@ footer p { margin: 0; }
 
 .pic{margin:-2px -2px 4px;aspect-ratio:4/3;border-radius:12px;background:#F6E3DC;display:flex;align-items:center;justify-content:center;overflow:hidden}
 .pic img{width:100%;height:100%;object-fit:contain;display:block}
+
+
+/* Search bar */
+.searchbox { position: relative; flex: 1 1 260px; min-width: 0; }
+.searchbox .search { width: 100%; padding: 13px 44px 13px 44px; font-size: 16px; box-shadow: 0 2px 10px rgba(99,59,36,.06); }
+.searchbox .s-ico { position: absolute; left: 16px; top: 50%; transform: translateY(-50%); width: 18px; height: 18px; color: var(--muted); pointer-events: none; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; }
+.searchbox .s-clear { position: absolute; right: 8px; top: 50%; transform: translateY(-50%); width: 30px; height: 30px; border-radius: 50%; border: 0; background: var(--blush-soft); color: var(--brand); font: inherit; font-size: 18px; line-height: 1; cursor: pointer; }
+.searchbox .s-clear[hidden] { display: none; }
+.try { display: flex; flex-wrap: wrap; gap: 6px 8px; align-items: center; font-size: 12.5px; color: var(--muted); margin-top: -14px; }
+.try button { font: inherit; font-size: 12.5px; font-weight: 600; color: var(--brand); background: none; border: 0; border-bottom: 1.5px dotted var(--blush); padding: 0 1px; cursor: pointer; }
+.try button:hover { color: var(--cta); }
+.card.flash { animation: flashcard 1.8s ease; }
+@keyframes flashcard { 0%,60% { box-shadow: 0 0 0 4px var(--blush); } 100% { box-shadow: 0 0 0 0 transparent; } }
+
+/* Deal Helper */
+.helper-btn { position: fixed; z-index: 60; right: max(16px, env(safe-area-inset-right, 0px)); bottom: calc(16px + env(safe-area-inset-bottom, 0px)); display: inline-flex; align-items: center; gap: 8px; padding: 13px 18px; border: 0; border-radius: 999px; background: var(--cta); color: var(--cta-ink); font: inherit; font-weight: 700; font-size: 14.5px; cursor: pointer; box-shadow: 0 8px 22px rgba(99,59,36,.28); }
+.helper-btn svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.helper-btn:hover { filter: brightness(1.07); }
+.helper-btn[aria-expanded="true"] { display: none; }
+.helper { position: fixed; z-index: 70; right: max(16px, env(safe-area-inset-right, 0px)); bottom: calc(16px + env(safe-area-inset-bottom, 0px)); width: min(400px, calc(100vw - 32px)); height: min(600px, calc(100dvh - 32px - env(safe-area-inset-bottom, 0px))); display: flex; flex-direction: column; background: var(--surface); color: var(--ink); border: 1px solid var(--line); border-radius: 18px; box-shadow: 0 18px 50px rgba(59,36,23,.30); overflow: hidden; }
+.helper[hidden] { display: none; }
+.h-head { display: flex; align-items: center; gap: 10px; padding: 12px 14px; background: var(--brand); color: var(--bg); }
+.h-head img { width: 34px; height: 34px; border-radius: 50%; flex: none; }
+.h-title { flex: 1; min-width: 0; line-height: 1.2; }
+.h-title strong { display: block; font-size: 15px; }
+.h-title span { font-size: 11.5px; opacity: .8; }
+.h-close { width: 34px; height: 34px; border-radius: 50%; border: 0; background: rgba(255,255,255,.16); color: inherit; font-size: 20px; line-height: 1; cursor: pointer; }
+.h-log { flex: 1; min-height: 0; overflow-y: auto; padding: 14px; display: flex; flex-direction: column; gap: 10px; overscroll-behavior: contain; }
+.msg { max-width: 88%; padding: 10px 13px; border-radius: 14px; font-size: 14px; line-height: 1.5; white-space: pre-wrap; overflow-wrap: anywhere; }
+.msg.bot { align-self: flex-start; background: var(--blush-soft); border-bottom-left-radius: 4px; }
+.msg.me { align-self: flex-end; background: var(--brand); color: var(--bg); border-bottom-right-radius: 4px; }
+.msg.typing { opacity: .7; font-style: italic; }
+.picks { align-self: stretch; display: flex; flex-direction: column; gap: 8px; }
+.pick { display: flex; gap: 10px; align-items: center; background: var(--bg); border: 1px solid var(--line); border-radius: 12px; padding: 8px; }
+.pick img { width: 62px; height: 62px; object-fit: contain; background: #F6E3DC; border-radius: 8px; flex: none; }
+.pick-body { min-width: 0; flex: 1; }
+.pick-t { font-size: 13px; font-weight: 700; color: var(--brand); line-height: 1.3; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.pick-a { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+.pick-a a, .pick-a button { font: inherit; font-size: 12px; font-weight: 700; padding: 6px 10px; border-radius: 8px; text-decoration: none; cursor: pointer; }
+.pick-a a { background: var(--cta); color: var(--cta-ink); border: 1.5px solid var(--cta); }
+.pick-a button { background: transparent; color: var(--brand); border: 1.5px solid var(--line); }
+.h-chips { display: flex; flex-wrap: wrap; gap: 6px; padding: 0 14px 10px; }
+.h-chips:empty { display: none; }
+.h-chips button { font: inherit; font-size: 12.5px; font-weight: 600; padding: 6px 11px; border-radius: 999px; border: 1.5px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; }
+.h-chips button:hover { border-color: var(--blush); }
+.h-form { display: flex; gap: 8px; padding: 10px 12px; border-top: 1px solid var(--line); }
+.h-form input { flex: 1; min-width: 0; font: inherit; font-size: 16px; padding: 10px 14px; border-radius: 999px; border: 1.5px solid var(--line); background: var(--bg); color: var(--ink); }
+.h-form button { font: inherit; font-weight: 700; font-size: 14px; padding: 0 16px; border-radius: 999px; border: 0; background: var(--cta); color: var(--cta-ink); cursor: pointer; }
+.h-fine { padding: 0 14px 10px; font-size: 10.5px; color: var(--muted); line-height: 1.4; }
+@media (max-width: 520px) { .helper { right: 8px; left: 8px; bottom: calc(8px + env(safe-area-inset-bottom, 0px)); width: auto; height: min(78dvh, 640px); } }
+@media (prefers-reduced-motion: reduce) { .card.flash { animation: none; outline: 3px solid var(--blush); } }
 </style>
 
 <div class="bg" id="bg" aria-hidden="true"></div>
@@ -169,8 +220,28 @@ footer p { margin: 0; }
   </div>
 
   <div class="tools-row">
-    <input class="search" id="q" type="search" placeholder="Search deals&hellip;" aria-label="Search deals">
+    <div class="searchbox">
+      <svg class="s-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input class="search" id="q" type="search" placeholder="Search deals, like vacuum or gift for mom" aria-label="Search deals" autocomplete="off" enterkeyhint="search">
+      <button class="s-clear" id="sClear" type="button" aria-label="Clear search" hidden>&times;</button>
+    </div>
     <span class="count" id="count" aria-live="polite"></span>
+  </div>
+  <div class="try">Try:
+    <button type="button" data-q="gift">gift</button>
+    <button type="button" data-q="vacuum">vacuum</button>
+    <button type="button" data-q="headphones">headphones</button>
+    <button type="button" data-q="perfume">perfume</button>
+    <button type="button" data-q="laptop">laptop</button>
+    <button type="button" data-q="baby">baby</button>
+  </div>
+  <div class="try">Try:
+    <button type="button" data-q="gift">gift</button>
+    <button type="button" data-q="vacuum">vacuum</button>
+    <button type="button" data-q="headphones">headphones</button>
+    <button type="button" data-q="perfume">perfume</button>
+    <button type="button" data-q="laptop">laptop</button>
+    <button type="button" data-q="baby">baby</button>
   </div>
 
   <section class="grid" aria-label="Deals">
@@ -504,6 +575,93 @@ footer p { margin: 0; }
   </footer>
 </main>
 
+<!--ASSIST-->
+<button class="helper-btn" id="helperBtn" type="button" aria-expanded="false" aria-controls="helper">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a8 8 0 01-11.6 7.1L4 20l1.1-4.6A8 8 0 1121 12z"/><path d="M9 11.5h.01M12 11.5h.01M15 11.5h.01"/></svg>
+  Ask Deal Helper
+</button>
+<section class="helper" id="helper" role="dialog" aria-label="Deal Helper chat" hidden>
+  <div class="h-head">
+    <img src="images/logo-small.jpg" alt="" width="34" height="34">
+    <div class="h-title"><strong>Deal Helper</strong><span>Automated shopping assistant</span></div>
+    <button class="h-close" id="helperClose" type="button" aria-label="Close chat">&times;</button>
+  </div>
+  <div class="h-log" id="hLog" role="log" aria-live="polite"></div>
+  <div class="h-chips" id="hChips"></div>
+  <form class="h-form" id="hForm" autocomplete="off">
+    <input id="hInput" type="text" maxlength="300" placeholder="What are you shopping for?" aria-label="Message Deal Helper">
+    <button type="submit">Send</button>
+  </form>
+  <p class="h-fine">I&rsquo;m an automated assistant and can make mistakes. I only know the deals on this page and can&rsquo;t see live prices. Check Amazon before you buy.</p>
+</section>
+<!--/ASSIST-->
+<script id="dgr-match">
+(function () {
+  var STOP = 'a an the for i me my we our you your want need looking look find show some any something to of and with in on is are do does have has what whats can get best good deals deal please im it its that this there any got give tell about like would should could one ones'.split(' ');
+  var SYN = {
+    vacuum:'vacuum robot mop cordless roborock shark dyson', vacuums:'vacuum', vac:'vacuum', robot:'robot vacuum mop roborock', mop:'mop vacuum', clean:'vacuum mop purifier cleaning', cleaning:'vacuum mop purifier cleaning', cleaner:'vacuum mop',
+    tv:'tv television bravia google', television:'tv bravia',
+    laptop:'laptop lenovo', laptops:'laptop lenovo', computer:'laptop lenovo', pc:'laptop lenovo', work:'laptop lenovo business',
+    headphones:'headphones noise wireless sony', headphone:'headphones noise sony', earbuds:'headphones noise sony', audio:'headphones soundbar bose sony', music:'headphones soundbar bose sony', speaker:'soundbar bose', speakers:'soundbar bose', sound:'soundbar bose headphones',
+    camera:'camera alpha sony mirrorless', photo:'camera alpha sony', photography:'camera alpha sony',
+    kitchen:'kitchen air fryer blender ninja chefman keurig cutting board warming coffee', cooking:'kitchen air fryer blender chefman ninja warming', cook:'kitchen air fryer blender chefman ninja',
+    coffee:'coffee keurig', blender:'blender ninja', smoothie:'blender ninja', fryer:'fryer air chefman', airfryer:'air fryer chefman',
+    makeup:'tarte shadow liner beauty', cosmetics:'tarte shadow liner beauty', eyeliner:'tarte liner shadow', eyes:'tarte liner shadow',
+    perfume:'perfume parfum eau armani ysl lancome', perfumes:'perfume parfum eau', fragrance:'perfume parfum eau armani ysl lancome', cologne:'perfume parfum eau', scent:'perfume parfum candle',
+    hair:'curling curl chi', curl:'curling curl chi', curling:'curling curl chi', skincare:'beauty', skin:'beauty',
+    candle:'candle yankee', candles:'candle yankee',
+    gift:'gift candle basket perfume airtag charcuterie stanley tumbler socks', gifts:'gift candle basket perfume airtag charcuterie stanley', present:'gift candle basket perfume', presents:'gift candle basket perfume', christmas:'gift candle basket perfume airtag tumbler', holiday:'gift candle basket perfume airtag tumbler', stocking:'gift socks airtag candle', thanksgiving:'gift candle charcuterie', hostess:'gift candle charcuterie basket',
+    mom:'gift perfume candle basket tumbler stanley parfum', mother:'gift perfume candle basket tumbler stanley', wife:'gift perfume candle basket tumbler stanley', girlfriend:'gift perfume candle basket tumbler stanley', her:'gift perfume candle basket tumbler stanley', sister:'gift perfume candle basket tumbler', friend:'gift candle basket tumbler charcuterie',
+    dad:'tech headphones camera soundbar airtag laptop', father:'tech headphones camera soundbar laptop', husband:'tech headphones camera soundbar airtag', boyfriend:'tech headphones camera soundbar airtag', him:'tech headphones camera soundbar airtag', brother:'tech headphones camera airtag',
+    baby:'baby car seat graco socks', infant:'baby car seat', newborn:'baby car seat socks', toddler:'baby car seat socks', kid:'baby socks car seat', kids:'baby socks car seat', car:'car seat graco ottocast carplay', seat:'car seat graco',
+    protein:'protein orgain fairlife shakes', shake:'protein fairlife shakes', shakes:'protein fairlife shakes', fitness:'protein walking pad rockare', workout:'protein walking pad', gym:'protein walking pad', walk:'walking pad rockare', treadmill:'walking pad rockare', desk:'desk walking pad',
+    vitamin:'vitamin b12', vitamins:'vitamin b12', supplement:'vitamin b12 protein', supplements:'vitamin b12 protein', health:'vitamin protein purifier',
+    tablet:'tablet fire', ipad:'tablet fire', kindle:'tablet fire',
+    security:'doorbell ring norton antivirus', doorbell:'doorbell ring', antivirus:'norton antivirus', vpn:'norton antivirus',
+    tracker:'airtag track', tracking:'airtag track', keys:'airtag', luggage:'airtag',
+    tumbler:'tumbler stanley', cup:'tumbler stanley', bottle:'tumbler stanley', water:'tumbler stanley',
+    snow:'snow ice melt', winter:'snow ice melt', ice:'ice melt snow',
+    purifier:'purifier air freaire', allergy:'purifier air freaire', allergies:'purifier air freaire', pets:'purifier air freaire', pet:'purifier air freaire',
+    paper:'paper towels bounty toilet scott', towels:'paper towels bounty', toilet:'toilet scott', tissue:'toilet scott', household:'bounty scott paper toilet', essentials:'bounty scott paper toilet protein vitamin celsius',
+    drink:'celsius sparkling protein', drinks:'celsius sparkling', soda:'celsius sparkling', sparkling:'celsius sparkling',
+    charcuterie:'charcuterie board bambusi', cheese:'charcuterie board bambusi', entertaining:'charcuterie board bambusi astercook'
+  };
+  function norm(s) { return String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/&/g, ' and ').replace(/[^a-z0-9 ]+/g, ' ').replace(/\s+/g, ' ').trim(); }
+  function tokens(q) {
+    var out = [];
+    norm(q).split(' ').forEach(function (w) { if (w && STOP.indexOf(w) === -1 && !/^\d+$/.test(w)) out.push(w); });
+    return out;
+  }
+  function expand(w) {
+    var set = {}, list = (SYN[w] ? SYN[w].split(' ') : [w]);
+    if (!SYN[w]) { list = [w]; if (w.length > 3 && /s$/.test(w)) list.push(w.slice(0, -1)); }
+    list.forEach(function (x) { set[x] = 1; });
+    return Object.keys(set);
+  }
+  function hit(hay, w) { return (' ' + hay).indexOf(' ' + w) !== -1; }
+  // strict: every query word must match (used by the search bar)
+  function match(term, text) {
+    var toks = tokens(term);
+    if (!toks.length) return norm(text).indexOf(norm(term)) !== -1;
+    var hay = norm(text);
+    return toks.every(function (t) { return expand(t).some(function (w) { return hit(hay, w); }); });
+  }
+  // score: how many query words match, with bonus for direct title hits (used by the helper)
+  function score(term, title, text) {
+    var toks = tokens(term), hay = norm(text), th = norm(title), s = 0;
+    toks.forEach(function (t) {
+      var ex = expand(t), got = 0;
+      ex.forEach(function (w) { if (hit(hay, w)) got++; if (hit(th, w)) got += 1; });
+      if (got) s += 2 + Math.min(got, 4) * 0.5;
+    });
+    return s;
+  }
+  window.DGRmatch = match;
+  window.DGRscore = score;
+  window.DGRtokens = tokens;
+  window.DGRnorm = norm;
+})();
+</script>
 <script>
 (function () {
   var chips = document.querySelectorAll('.chip');
@@ -559,7 +717,7 @@ footer p { margin: 0; }
     cards.forEach(function (card) {
       var title = card.querySelector('h2').textContent;
       var okCat = filter === 'all' || (filter === 'saved' ? !!saved[title] : card.getAttribute('data-cat') === filter);
-      var okQ = !term || card.getAttribute('data-title').indexOf(term) !== -1;
+      var okQ = !term || window.DGRmatch(term, card.getAttribute('data-title') + ' ' + card.getAttribute('data-cat'));
       var show = okCat && okQ;
       card.hidden = !show;
       if (show) shown++;
@@ -618,5 +776,184 @@ footer p { margin: 0; }
       });
     });
   }
+})();
+</script>
+<script id="dgr-assist">
+(function () {
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.card'));
+  var deals = cards.map(function (c) {
+    var img = c.querySelector('.pic img'), a = c.querySelector('a.go');
+    var key = img ? img.getAttribute('src').replace(/^.*\//, '').replace(/\.jpg$/, '') : '';
+    c.setAttribute('data-key', key);
+    return {
+      key: key, el: c, cat: c.getAttribute('data-cat'),
+      catLabel: c.querySelector('.cat').childNodes[0].textContent.trim(),
+      title: c.querySelector('h2').textContent,
+      desc: c.querySelector('p').textContent,
+      url: a.getAttribute('href'), img: img ? img.getAttribute('src') : ''
+    };
+  });
+  var byKey = {}; deals.forEach(function (d) { byKey[d.key] = d; });
+
+  var btn = document.getElementById('helperBtn'), box = document.getElementById('helper');
+  var logEl = document.getElementById('hLog'), chipsEl = document.getElementById('hChips');
+  var form = document.getElementById('hForm'), input = document.getElementById('hInput');
+  var closeBtn = document.getElementById('helperClose');
+  var q = document.getElementById('q');
+  var history = [], busy = false, aiOff = false, started = false;
+  try { aiOff = sessionStorage.getItem('dgr-ai-off') === '1'; } catch (e) {}
+
+  /* ---------- search bar extras ---------- */
+  var sb = document.getElementById('sClear');
+  function syncClear() { sb.hidden = !q.value; }
+  q.addEventListener('input', syncClear);
+  sb.addEventListener('click', function () { q.value = ''; q.dispatchEvent(new Event('input')); q.focus(); });
+  document.querySelectorAll('.try button').forEach(function (b) {
+    b.addEventListener('click', function () { setAll(); q.value = b.getAttribute('data-q'); q.dispatchEvent(new Event('input')); q.scrollIntoView({ behavior: 'smooth', block: 'center' }); });
+  });
+  document.addEventListener('keydown', function (e) {
+    var t = e.target && e.target.tagName;
+    if (e.key === '/' && t !== 'INPUT' && t !== 'TEXTAREA') { e.preventDefault(); q.focus(); q.scrollIntoView({ block: 'center' }); }
+    if (e.key === 'Escape' && !box.hidden) closeHelper();
+  });
+  function setAll() { var all = document.querySelector('.chip[data-filter="all"]'); if (all && all.getAttribute('aria-pressed') !== 'true') all.click(); }
+
+  /* ---------- helper open/close ---------- */
+  function openHelper() {
+    box.hidden = false; btn.setAttribute('aria-expanded', 'true');
+    if (!started) { started = true; greet(); }
+    setTimeout(function () { input.focus(); }, 30);
+  }
+  function closeHelper() { box.hidden = true; btn.setAttribute('aria-expanded', 'false'); btn.focus(); }
+  btn.addEventListener('click', openHelper);
+  closeBtn.addEventListener('click', closeHelper);
+
+  /* ---------- rendering ---------- */
+  function scroll() { logEl.scrollTop = logEl.scrollHeight; requestAnimationFrame(function () { logEl.scrollTop = logEl.scrollHeight; }); }
+  function say(text, who) {
+    var m = document.createElement('div'); m.className = 'msg ' + who; m.textContent = text;
+    logEl.appendChild(m); scroll(); return m;
+  }
+  function showPicks(list) {
+    if (!list.length) return;
+    var wrap = document.createElement('div'); wrap.className = 'picks';
+    list.forEach(function (d) {
+      var row = document.createElement('div'); row.className = 'pick';
+      var im = document.createElement('img'); im.src = d.img; im.alt = ''; im.loading = 'lazy';
+      var body = document.createElement('div'); body.className = 'pick-body';
+      var t = document.createElement('div'); t.className = 'pick-t'; t.textContent = d.title;
+      var act = document.createElement('div'); act.className = 'pick-a';
+      var a = document.createElement('a'); a.href = d.url; a.target = '_blank'; a.rel = 'noopener sponsored'; a.textContent = 'View on Amazon';
+      a.setAttribute('aria-label', 'View ' + d.title + ' on Amazon');
+      var b = document.createElement('button'); b.type = 'button'; b.textContent = 'Show on page';
+      b.addEventListener('click', function () { focusCard(d); });
+      act.appendChild(a); act.appendChild(b); body.appendChild(t); body.appendChild(act);
+      row.appendChild(im); row.appendChild(body); wrap.appendChild(row);
+    });
+    logEl.appendChild(wrap); scroll();
+  }
+  function setChips(list) {
+    chipsEl.textContent = '';
+    list.forEach(function (label) {
+      var b = document.createElement('button'); b.type = 'button'; b.textContent = label;
+      b.addEventListener('click', function () { ask(label); });
+      chipsEl.appendChild(b);
+    });
+    scroll();
+  }
+  function focusCard(d) {
+    setAll(); q.value = ''; q.dispatchEvent(new Event('input'));
+    if (window.innerWidth <= 520) closeHelper();
+    setTimeout(function () {
+      d.el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      d.el.classList.remove('flash'); void d.el.offsetWidth; d.el.classList.add('flash');
+    }, 60);
+  }
+
+  /* ---------- local brain ---------- */
+  function rank(text, n) {
+    var list = deals.map(function (d, i) {
+      return { d: d, s: window.DGRscore(text, d.title, d.title + ' ' + d.desc + ' ' + d.catLabel + ' ' + d.cat), i: i };
+    }).filter(function (x) { return x.s > 0; });
+    list.sort(function (a, b) { return b.s - a.s || a.i - b.i; });
+    return list.slice(0, n).map(function (x) { return x.d; });
+  }
+  function cat(c, n) { return deals.filter(function (d) { return d.cat === c; }).slice(0, n); }
+  function has(t, re) { return re.test(t); }
+
+  function localReply(text) {
+    var t = window.DGRnorm(text);
+    if (!t) return { reply: 'Tell me what you are shopping for, like "a gift for mom" or "robot vacuum".', picks: [] };
+    if (has(t, /^(hi|hello|hey|yo|hiya|good (morning|afternoon|evening))\b/) && t.split(' ').length <= 4)
+      return { reply: 'Hi! Tell me what you are shopping for, or who you are buying for, and I will point you to the deals on this page.', picks: [] };
+    if (has(t, /^(thanks|thank you|thx|ty)\b/)) return { reply: 'You are welcome! New deals go up regularly, so check back soon.', picks: [] };
+    if (has(t, /(commission|affiliate|associate|sponsor|do you (make|earn)|how do you (make|earn))/))
+      return { reply: 'Yes. I earn a small commission from qualifying Amazon purchases made through the links on this page, at no extra cost to you. As an Amazon Associate I earn from qualifying purchases.', picks: [] };
+    if (has(t, /(price|how much|cost|cheap|cheaper|worth it|price history|lowest|budget|afford|discount|sale)/) && !has(t, /(gift basket)/)) {
+      var m = rank(text.replace(/price|cheap|cheaper|cost|how much|worth it|budget|afford|discount|sale/gi, ''), 3);
+      return { reply: 'I can\'t see live prices, because Amazon prices change all the time. Tap View on Amazon to see today\'s price plus any on-page coupon or Subscribe & Save option. A price-history tracker like Keepa or CamelCamelCamel can also show whether now is a good time to buy.', picks: m };
+    }
+    if (has(t, /(coupon|promo|code|clip)/))
+      return { reply: 'Some deals have an on-page coupon box or a promo code, so look on the Amazon page before you check out. The gift basket currently lists the code CLXKBLN4, which may expire.', picks: rank('gift basket', 1) };
+    if (has(t, /(how (do|does|to)|ship|delivery|checkout|check out|return|refund|order|pay|where do i buy|buy)/) && !has(t, /(gift|for (my|a|the))/))
+      return { reply: 'Tap View on Amazon on any deal. You will check out, pay and get shipping and returns directly from Amazon, so everything works just like a normal Amazon order.', picks: [] };
+    if (has(t, /(new|latest|newest|today|recent|just (posted|added)|fresh|what s up|whats up)/) && !rank(t.replace(/\b(new|latest|newest|today|recent|just|posted|added|fresh)\b/g, ''), 1).length)
+      return { reply: 'Here are the newest deals:', picks: deals.slice(0, 4) };
+    var catWord = has(t, /\bbeauty\b/) ? 'beauty' : has(t, /\bbaby\b/) && t.split(' ').length <= 3 ? 'baby' : has(t, /^(tech|technology|electronics)\b/) ? 'tech' : has(t, /^(home|house)\b/) ? 'home' : '';
+    if (catWord && t.split(' ').length <= 4) {
+      var lab = { beauty: 'beauty', baby: 'baby', tech: 'tech', home: 'home' }[catWord];
+      return { reply: 'Here are a few ' + lab + ' deals. Tap a category chip on the page to see all of them.', picks: cat(catWord, 4) };
+    }
+    var results = rank(text, 4);
+    if (results.length) {
+      var isGift = has(t, /(gift|present|mom|mother|wife|girlfriend|dad|father|husband|boyfriend|christmas|holiday|birthday|stocking|friend|sister|brother|hostess)/);
+      return { reply: isGift ? 'Here are some gift ideas from the page:' : (results.length === 1 ? 'This one looks like a match:' : 'These look like a match:'), picks: results };
+    }
+    return { reply: 'I couldn\'t find a match for that. Try a product type, like "vacuum", "perfume" or "headphones", or tell me who you are shopping for.', picks: [] };
+  }
+
+  function greet() {
+    say('Hi! I\'m the Deals Got Real helper. Tell me what you are shopping for, or who you are buying for, and I\'ll point you to deals on this page.', 'bot');
+    setChips(['Gift ideas', 'Robot vacuum', 'Headphones', 'What\'s new?', 'Do you earn commission?']);
+  }
+
+  /* ---------- optional AI (Netlify function) ---------- */
+  function askServer() {
+    var ctl = ('AbortController' in window) ? new AbortController() : null;
+    var timer = setTimeout(function () { if (ctl) ctl.abort(); }, 14000);
+    return fetch('/.netlify/functions/assistant', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ messages: history.slice(-8) }), signal: ctl ? ctl.signal : undefined
+    }).then(function (r) {
+      clearTimeout(timer);
+      if (!r.ok) throw new Error('http ' + r.status);
+      return r.json();
+    }).then(function (j) {
+      if (!j || typeof j.reply !== 'string' || !j.reply) throw new Error('bad');
+      var picks = (j.ids || []).map(function (k) { return byKey[k]; }).filter(Boolean).slice(0, 4);
+      return { reply: j.reply, picks: picks };
+    });
+  }
+
+  function ask(text) {
+    text = String(text || '').trim().slice(0, 300);
+    if (!text || busy) return;
+    busy = true; setChips([]);
+    say(text, 'me'); history.push({ role: 'user', content: text });
+    var typing = say('Looking…', 'bot'); typing.classList.add('typing');
+    var run = aiOff ? Promise.reject(new Error('off')) : askServer();
+    run.catch(function (err) {
+      if (String(err && err.message) !== 'off') { aiOff = true; try { sessionStorage.setItem('dgr-ai-off', '1'); } catch (e) {} }
+      return localReply(text);
+    }).then(function (res) {
+      typing.remove();
+      say(res.reply, 'bot'); history.push({ role: 'assistant', content: res.reply });
+      showPicks(res.picks);
+      setChips(['Gift ideas', 'What\'s new?', 'Show beauty deals']);
+      busy = false;
+    });
+  }
+  form.addEventListener('submit', function (e) { e.preventDefault(); var v = input.value; input.value = ''; ask(v); });
+  window.DGRassistant = { ask: ask, local: localReply, deals: deals };
 })();
 </script>
