@@ -1,4 +1,4 @@
-// Deal Helper: answers shopper questions using the deals in deals.json.
+// DealFinder: answers shopper questions using the deals in deals.json.
 // Needs ANTHROPIC_API_KEY in Netlify > Site configuration > Environment variables.
 // Without it the function returns 503 and the page falls back to its built-in helper.
 const MODEL = process.env.ASSISTANT_MODEL || 'claude-haiku-5-5';
@@ -44,7 +44,7 @@ exports.handler = async (event) => {
   const ids = new Set(deals.map((d) => d.id));
   const catalog = deals.map((d) => `${d.id} | ${d.category} | ${d.title} | ${d.description}`).join('\n');
 
-  const system = `You are Deal Helper on the Deals Got Real page (@dealsgotreal), a hub of Amazon deals shared on Instagram. Friendly, brief, plain language. Reply in 1 to 3 short sentences.
+  const system = `You are DealFinder on the Deals Got Real page (@dealsgotreal), a hub of Amazon deals shared on Instagram. Friendly, brief, plain language. Reply in 1 to 3 short sentences.
 You only recommend products from the catalog below. Never invent products, features, coupons or availability.
 You do NOT know prices, discounts or stock. Never state or guess a price or a percentage off. If asked, say prices change and the shopper should open the Amazon page to see today's price and any coupon, and that Keepa or CamelCamelCamel show price history.
 Checkout, shipping and returns all happen on Amazon.
