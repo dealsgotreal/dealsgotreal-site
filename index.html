@@ -204,6 +204,11 @@ footer p { margin: 0; }
 .opts .tog[aria-pressed="true"] { background: var(--blush); border-color: var(--blush); color: #fff; }
 .opts .reset { font: inherit; font-size: 13px; font-weight: 700; color: var(--cta); background: none; border: 0; cursor: pointer; text-decoration: underline; }
 .opts .reset[hidden] { display: none; }
+
+.sub { margin: -16px 0 0; font-size: 14px; color: var(--muted); font-weight: 600; }
+.season { background: var(--blush-soft); color: var(--brand); border-radius: 12px; padding: 11px 16px; font-size: 14px; }
+.season strong { font-weight: 800; }
+footer .tag { font-size: 12.5px; font-weight: 700; color: var(--brand); }
 </style>
 
 <div class="bg" id="bg" aria-hidden="true"></div>
@@ -216,7 +221,10 @@ footer p { margin: 0; }
     <a class="follow" href="https://www.instagram.com/dealsgotreal" target="_blank" rel="noopener">Follow @dealsgotreal</a>
   </header>
 
-  <p class="intro">Every deal I post on Instagram, in one place. Tap through to Amazon to see today&rsquo;s price before you buy.</p>
+  <p class="intro">Real deals. Unreal steals. Every find I post, all in one place.</p>
+  <p class="sub">New finds added daily. Tap any deal to see today&rsquo;s price on Amazon.</p>
+
+  <div class="season"><strong>Gift season is here.</strong> Find something for everyone on your list.</div>
 
   <div class="filters" role="group" aria-label="Filter deals by category">
     <button class="chip" type="button" data-filter="all" aria-pressed="true">All deals</button>
@@ -231,7 +239,7 @@ footer p { margin: 0; }
   <div class="tools-row">
     <div class="searchbox">
       <svg class="s-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
-      <input class="search" id="q" type="search" placeholder="Try: vacuum" aria-label="Search deals" autocomplete="off" enterkeyhint="search">
+      <input class="search" id="q" type="search" placeholder="Hunting for a deal?" aria-label="Search deals" autocomplete="off" enterkeyhint="search">
       <button class="s-clear" id="sClear" type="button" aria-label="Clear search" hidden>&times;</button>
     </div>
     <span class="count" id="count" aria-live="polite"></span>
@@ -251,7 +259,7 @@ footer p { margin: 0; }
       <div class="meta"><span class="cat">Beauty</span><span class="found">Found Nov 14</span></div>
       <h2>BodyRefresh Self-Care Gift Basket</h2>
       <p>Blanket, 40oz tumbler, socks, candle and spa extras in a gift box. Clip the on-page coupon, then try promo code CLXKBLN4 at checkout while it lasts.</p>
-      <a class="go" href="https://link.amazon/B06Rk4XVa" target="_blank" rel="noopener sponsored" aria-label="View BodyRefresh Self-Care Gift Basket on Amazon">View on Amazon</a>
+      <a class="go" href="https://link.amazon/B06Rk4XVa" target="_blank" rel="noopener sponsored" aria-label="View BodyRefresh Self-Care Gift Basket on Amazon">Get this deal</a>
     </article>
 
     <article class="card" data-cat="beauty">
@@ -259,7 +267,7 @@ footer p { margin: 0; }
       <div class="meta"><span class="cat">Beauty</span><span class="found">Found Nov 13</span></div>
       <h2>Lanc&ocirc;me La Vie Est Belle Eau de Parfum, 1.7 oz</h2>
       <p>Iris, patchouli and warm vanilla. A holiday gift or a treat for yourself.</p>
-      <a class="go" href="https://link.amazon/B08YD9uzM" target="_blank" rel="noopener sponsored" aria-label="View Lancme La Vie Est Belle Eau de Parfum, 1.7 oz on Amazon">View on Amazon</a>
+      <a class="go" href="https://link.amazon/B08YD9uzM" target="_blank" rel="noopener sponsored" aria-label="View Lancme La Vie Est Belle Eau de Parfum, 1.7 oz on Amazon">Get this deal</a>
     </article>
 
     <article class="card" data-cat="home">
@@ -267,7 +275,7 @@ footer p { margin: 0; }
       <div class="meta"><span class="cat">Home</span><span class="found">Found Nov 13</span></div>
       <h2>Roborock Q10 S5+ Robot Vacuum &amp; Mop</h2>
       <p>10,000Pa suction, self-emptying for up to 70 days, vacuums and mops with smart obstacle avoidance.</p>
-      <a class="go" href="https://link.amazon/B0gbwA2q0" target="_blank" rel="noopener sponsored" aria-label="View Roborock Q10 S5+ Robot Vacuum  Mop on Amazon">View on Amazon</a>
+      <a class="go" href="https://link.amazon/B0gbwA2q0" target="_blank" rel="noopener sponsored" aria-label="View Roborock Q10 S5+ Robot Vacuum  Mop on Amazon">Get this deal</a>
     </article>
 
     <article class="card" data-cat="home">
@@ -275,7 +283,7 @@ footer p { margin: 0; }
       <div class="meta"><span class="cat">Home</span><span class="found">Found Nov 13</span></div>
       <h2>Shark Navigator Lift-Away Vacuum</h2>
       <p>HEPA filtration, light to carry, swivel steering for carpets, rugs and hard floors.</p>
-      <a class="go" href="https://link.amazon/B0cU9mBSO" target="_blank" rel="noopener sponsored" aria-label="View Shark Navigator Lift-Away Vacuum on Amazon">View on Amazon</a>
+      <a class="go" href="https://link.amazon/B0cU9mBSO" target="_blank" rel="noopener sponsored" aria-label="View Shark Navigator Lift-Away Vacuum on Amazon">Get this deal</a>
     </article>
 
     <article class="card" data-cat="home">
@@ -283,7 +291,7 @@ footer p { margin: 0; }
       <div class="meta"><span class="cat">Home</span><span class="found">Found Nov 13</span></div>
       <h2>Bamb&uuml;si Charcuterie Board Gift Set</h2>
       <p>A hosting set for the holidays. Look for a coupon box on the Amazon page and clip it before checkout.</p>
-      <a class="go" href="https://link.amazon/B02h6aeBh" target="_blank" rel="noopener sponsored" aria-label="View Bambsi Charcuterie Board Gift Set on Amazon">View on Amazon</a>
+      <a class="go" href="https://link.amazon/B02h6aeBh" target="_blank" rel="noopener sponsored" aria-label="View Bambsi Charcuterie Board Gift Set on Amazon">Get this deal</a>
     </article>
 
     <article class="card" data-cat="tech">
@@ -291,7 +299,7 @@ footer p { margin: 0; }
       <div class="meta"><span class="cat">Tech</span><span class="found">Found Nov 13</span></div>
       <h2>Amazon Fire HD 10 Tablet, 32GB</h2>
       <p>10.1-inch Full HD screen for streaming and reading. The deal is for the black 32GB version with lockscreen ads.</p>
-      <a class="go" href="https://link.amazon/B01CEaW4F" target="_blank" rel="noopener sponsored" aria-label="View Amazon Fire HD 10 Tablet, 32GB on Amazon">View on Amazon</a>
+      <a class="go" href="https://link.amazon/B01CEaW4F" target="_blank" rel="noopener sponsored" aria-label="View Amazon Fire HD 10 Tablet, 32GB on Amazon">Get this deal</a>
     </article>
 
     <article class="card" data-cat="home">
@@ -299,7 +307,7 @@ footer p { margin: 0; }
       <div class="meta"><span class="cat">Home</span><span class="found">Found Nov 13</span></div>
       <h2>Roborock Qrevo 2 Pro Robot Vacuum &amp; Mop</h2>
       <p>20,000Pa suction, a self-cleaning mop with edge mopping, and obstacle avoidance for pet hair.</p>
-      <a class="go" href="https://link.amazon/B02PxVOz4" target="_blank" rel="noopener sponsored" aria-label="View Roborock Qrevo 2 Pro Robot Vacuum  Mop on Amazon">View on Amazon</a>
+      <a class="go" href="https://link.amazon/B02PxVOz4" target="_blank" rel="noopener sponsored" aria-label="View Roborock Qrevo 2 Pro Robot Vacuum  Mop on Amazon">Get this deal</a>
     </article>
 
     <article class="card" data-cat="tech">
@@ -307,7 +315,7 @@ footer p { margin: 0; }
       <div class="meta"><span class="cat">Tech</span><span class="found">Found Nov 12</span></div>
       <h2>Bose Smart Ultra Soundbar, White</h2>
       <p>Dolby Atmos sound, Alexa and Google voice control, and HDMI eARC.</p>
-      <a class="go" href="https://link.amazon/B083pygsT" target="_blank" rel="noopener sponsored" aria-label="View Bose Smart Ultra Soundbar, White on Amazon">View on Amazon</a>
+      <a class="go" href="https://link.amazon/B083pygsT" target="_blank" rel="noopener sponsored" aria-label="View Bose Smart Ultra Soundbar, White on Amazon">Get this deal</a>
     </article>
 
     <article class="card" data-cat="tech">
@@ -315,7 +323,7 @@ footer p { margin: 0; }
       <div class="meta"><span class="cat">Tech</span><span class="found">Found Nov 12</span></div>
       <h2>Sony Alpha a7 III Full-Frame Mirrorless Camera Kit</h2>
       <p>24.2MP full-frame sensor, 4K video and up to 10 frames per second.</p>
-      <a class="go" href="https://link.amazon/B05CneL9z" target="_blank" rel="noopener sponsored" aria-label="View Sony Alpha a7 III Full-Frame Mirrorless Camera Kit on Amazon">View on Amazon</a>
+      <a class="go" href="https://link.amazon/B05CneL9z" target="_blank" rel="noopener sponsored" aria-label="View Sony Alpha a7 III Full-Frame Mirrorless Camera Kit on Amazon">Get this deal</a>
     </article>
 
     <article class="card" data-cat="home">
@@ -323,7 +331,7 @@ footer p { margin: 0; }
       <div class="meta"><span class="cat">Home</span><span class="found">Found Nov 12</span></div>
       <h2>Snow Joe Premium Enviro Blend Ice Melt, 50 lb</h2>
       <p>Works down to -10&deg;F and is formulated to be gentler on concrete and paws. Get ready before the snow.</p>
-      <a class="go" href="https://link.amazon/B0aEeSg6W" target="_blank" rel="noopener sponsored" aria-label="View Snow Joe Premium Enviro Blend Ice Melt, 50 lb on Amazon">View on Amazon</a>
+      <a class="go" href="https://link.amazon/B0aEeSg6W" target="_blank" rel="noopener sponsored" aria-label="View Snow Joe Premium Enviro Blend Ice Melt, 50 lb on Amazon">Get this deal</a>
     </article>
 
     <article class="card" data-cat="beauty">
@@ -331,7 +339,7 @@ footer p { margin: 0; }
       <div class="meta"><span class="cat">Beauty</span><span class="found">Found Nov 12</span></div>
       <h2>Tarte smolderEYES Waterproof Shadow Liner</h2>
       <p>Eyeliner and cream eyeshadow in one stick, with a built-in smudger.</p>
-      <a class="go" href="https://link.amazon/B0bwaLgNH" target="_blank" rel="noopener sponsored" aria-label="View Tarte smolderEYES Waterproof Shadow Liner on Amazon">View on Amazon</a>
+      <a class="go" href="https://link.amazon/B0bwaLgNH" target="_blank" rel="noopener sponsored" aria-label="View Tarte smolderEYES Waterproof Shadow Liner on Amazon">Get this deal</a>
     </article>
 
     <article class="card" data-cat="beauty">
@@ -339,7 +347,7 @@ footer p { margin: 0; }
       <div class="meta"><span class="cat">Beauty</span><span class="found">Found Nov 12</span></div>
       <h2>YSL Libre L&rsquo;Eau Nue Perfume, 3 oz</h2>
       <p>A gift-ready fragrance for the Thanksgiving and holiday shopping list.</p>
-      <a class="go" href="https://link.amazon/B0e21cZBi" target="_blank" rel="noopener sponsored" aria-label="View YSL Libre LEau Nue Perfume, 3 oz on Amazon">View on Amazon</a>
+      <a class="go" href="https://link.amazon/B0e21cZBi" target="_blank" rel="noopener sponsored" aria-label="View YSL Libre LEau Nue Perfume, 3 oz on Amazon">Get this deal</a>
     </article>
 
     <article class="card" data-cat="beauty">
@@ -347,7 +355,7 @@ footer p { margin: 0; }
       <div class="meta"><span class="cat">Beauty</span><span class="found">Found Nov 12</span></div>
       <h2>Giorgio Armani My Way Eau de Parfum, 3 oz</h2>
       <p>A citrus floral with bergamot, jasmine and vanilla.</p>
-      <a class="go" href="https://link.amazon/B06zN8hby" target="_blank" rel="noopener sponsored" aria-label="View Giorgio Armani My Way Eau de Parfum, 3 oz on Amazon">View on Amazon</a>
+      <a class="go" href="https://link.amazon/B06zN8hby" target="_blank" rel="noopener sponsored" aria-label="View Giorgio Armani My Way Eau de Parfum, 3 oz on Amazon">Get this deal</a>
     </article>
 
     <article class="card" data-cat="beauty">
@@ -355,7 +363,7 @@ footer p { margin: 0; }
       <div class="meta"><span class="cat">Beauty</span><span class="found">Found Nov 12</span></div>
       <h2>CHI Spin N Curl 1&Prime; Ceramic Rotating Curling Iron, Ruby Red</h2>
       <p>Automatic rotating curls in either direction, heats up to 410&deg;F.</p>
-      <a class="go" href="https://link.amazon/B0cZ5sqbi" target="_blank" rel="noopener sponsored" aria-label="View CHI Spin N Curl 1&Prime; Ceramic Rotating Curling Iron, Ruby Red on Amazon">View on Amazon</a>
+      <a class="go" href="https://link.amazon/B0cZ5sqbi" target="_blank" rel="noopener sponsored" aria-label="View CHI Spin N Curl 1&Prime; Ceramic Rotating Curling Iron, Ruby Red on Amazon">Get this deal</a>
     </article>
 
     <article class="card" data-cat="home">
@@ -363,7 +371,7 @@ footer p { margin: 0; }
       <div class="meta"><span class="cat">Home</span><span class="found">Found Nov 12</span></div>
       <h2>Rockare Under-Desk Walking Pad</h2>
       <p>Incline and decline settings, a quiet 2.5HP motor and a compact frame. Check the page for a coupon box.</p>
-      <a class="go" href="https://link.amazon/B06OQXKAK" target="_blank" rel="noopener sponsored" aria-label="View Rockare Under-Desk Walking Pad on Amazon">View on Amazon</a>
+      <a class="go" href="https://link.amazon/B06OQXKAK" target="_blank" rel="noopener sponsored" aria-label="View Rockare Under-Desk Walking Pad on Amazon">Get this deal</a>
     </article>
 
     <article class="card" data-cat="baby">
@@ -371,7 +379,7 @@ footer p { margin: 0; }
       <div class="meta"><span class="cat">Baby</span><span class="found">Found Nov 12</span></div>
       <h2>OTTOCAST Baby Car Camera with Wireless CarPlay Adapter</h2>
       <p>1080P split-screen view and night vision with no extra screen. Needs a compatible Apple CarPlay setup, not Android.</p>
-      <a class="go" href="https://link.amazon/B08D0TZZn" target="_blank" rel="noopener sponsored" aria-label="View OTTOCAST Baby Car Camera with Wireless CarPlay Adapter on Amazon">View on Amazon</a>
+      <a class="go" href="https://link.amazon/B08D0TZZn" target="_blank" rel="noopener sponsored" aria-label="View OTTOCAST Baby Car Camera with Wireless CarPlay Adapter on Amazon">Get this deal</a>
     </article>
 
     <article class="card" data-cat="baby">
@@ -379,7 +387,7 @@ footer p { margin: 0; }
       <div class="meta"><span class="cat">Baby</span><span class="found">Found Nov 11</span></div>
       <h2>Graco 4Ever DLX 4-in-1 Convertible Car Seat</h2>
       <p>Rear-facing, forward-facing, highback and backless booster modes. Follow the seat&rsquo;s age, height and weight limits.</p>
-      <a class="go" href="https://link.amazon/B0arfqLoA" target="_blank" rel="noopener sponsored" aria-label="View Graco 4Ever DLX 4-in-1 Convertible Car Seat on Amazon">View on Amazon</a>
+      <a class="go" href="https://link.amazon/B0arfqLoA" target="_blank" rel="noopener sponsored" aria-label="View Graco 4Ever DLX 4-in-1 Convertible Car Seat on Amazon">Get this deal</a>
     </article>
 
     <article class="card" data-cat="baby">
@@ -387,7 +395,7 @@ footer p { margin: 0; }
       <div class="meta"><span class="cat">Baby</span><span class="found">Found Nov 11</span></div>
       <h2>Sesame Street Socks, 6-Pack (Size S)</h2>
       <p>Six pairs of Sesame Street quarter socks for little ones. The deal applies to the selected size and style.</p>
-      <a class="go" href="https://link.amazon/B0eBcCtwL" target="_blank" rel="noopener sponsored" aria-label="View Sesame Street Socks, 6-Pack (Size S) on Amazon">View on Amazon</a>
+      <a class="go" href="https://link.amazon/B0eBcCtwL" target="_blank" rel="noopener sponsored" aria-label="View Sesame Street Socks, 6-Pack (Size S) on Amazon">Get this deal</a>
     </article>
 
     <article class="card" data-cat="essentials">
@@ -395,7 +403,7 @@ footer p { margin: 0; }
       <div class="meta"><span class="cat">Everyday essentials</span><span class="found">Found Nov 11</span></div>
       <h2>Orgain Organic Vegan Protein Powder, Variety Pack</h2>
       <p>10 single-serve packets in 5 flavors, 21g plant protein, no added sugar. Subscribe &amp; Save may apply.</p>
-      <a class="go" href="https://link.amazon/B0fxbPnEb" target="_blank" rel="noopener sponsored" aria-label="View Orgain Organic Vegan Protein Powder, Variety Pack on Amazon">View on Amazon</a>
+      <a class="go" href="https://link.amazon/B0fxbPnEb" target="_blank" rel="noopener sponsored" aria-label="View Orgain Organic Vegan Protein Powder, Variety Pack on Amazon">Get this deal</a>
     </article>
 
     <article class="card" data-cat="essentials">
@@ -403,7 +411,7 @@ footer p { margin: 0; }
       <div class="meta"><span class="cat">Everyday essentials</span><span class="found">Found Nov 11</span></div>
       <h2>Fairlife Core Power Elite Chocolate Protein Shakes, 12-Pack</h2>
       <p>42g of protein per bottle. Check the page for Subscribe &amp; Save and first-delivery coupons.</p>
-      <a class="go" href="https://link.amazon/B0hU2tYXg" target="_blank" rel="noopener sponsored" aria-label="View Fairlife Core Power Elite Chocolate Protein Shakes, 12-Pack on Amazon">View on Amazon</a>
+      <a class="go" href="https://link.amazon/B0hU2tYXg" target="_blank" rel="noopener sponsored" aria-label="View Fairlife Core Power Elite Chocolate Protein Shakes, 12-Pack on Amazon">Get this deal</a>
     </article>
 
     <article class="card" data-cat="essentials">
@@ -411,7 +419,7 @@ footer p { margin: 0; }
       <div class="meta"><span class="cat">Everyday essentials</span><span class="found">Found Nov 11</span></div>
       <h2>Nature Made Vitamin B12 5000 mcg, 60 Softgels</h2>
       <p>Check the page for Subscribe &amp; Save and coupon options.</p>
-      <a class="go" href="https://link.amazon/B07XRUjVh" target="_blank" rel="noopener sponsored" aria-label="View Nature Made Vitamin B12 5000 mcg, 60 Softgels on Amazon">View on Amazon</a>
+      <a class="go" href="https://link.amazon/B07XRUjVh" target="_blank" rel="noopener sponsored" aria-label="View Nature Made Vitamin B12 5000 mcg, 60 Softgels on Amazon">Get this deal</a>
     </article>
 
     <article class="card" data-cat="tech">
@@ -419,7 +427,7 @@ footer p { margin: 0; }
       <div class="meta"><span class="cat">Tech</span><span class="found">Found Nov 11</span></div>
       <h2>Apple AirTag 4-Pack (2nd Generation)</h2>
       <p>Track keys, bags and wallets, play a sound to find them, and use Precision Finding.</p>
-      <a class="go" href="https://link.amazon/B08Xv39uj" target="_blank" rel="noopener sponsored" aria-label="View Apple AirTag 4-Pack (2nd Generation) on Amazon">View on Amazon</a>
+      <a class="go" href="https://link.amazon/B08Xv39uj" target="_blank" rel="noopener sponsored" aria-label="View Apple AirTag 4-Pack (2nd Generation) on Amazon">Get this deal</a>
     </article>
 
     <article class="card" data-cat="home">
@@ -427,7 +435,7 @@ footer p { margin: 0; }
       <div class="meta"><span class="cat">Home</span><span class="found">Found Nov 11</span></div>
       <h2>Astercook 3-Piece Bamboo Cutting Board Set</h2>
       <p>Three reversible boards with juice grooves and a wooden storage stand.</p>
-      <a class="go" href="https://link.amazon/B02YwbHNn" target="_blank" rel="noopener sponsored" aria-label="View Astercook 3-Piece Bamboo Cutting Board Set on Amazon">View on Amazon</a>
+      <a class="go" href="https://link.amazon/B02YwbHNn" target="_blank" rel="noopener sponsored" aria-label="View Astercook 3-Piece Bamboo Cutting Board Set on Amazon">Get this deal</a>
     </article>
 
     <article class="card" data-cat="tech">
@@ -435,7 +443,7 @@ footer p { margin: 0; }
       <div class="meta"><span class="cat">Tech</span><span class="found">Found Nov 11</span></div>
       <h2>Sony BRAVIA 5 98&Prime; Mini LED 4K Google TV</h2>
       <p>120Hz refresh rate, Dolby Vision and Dolby Atmos. Great for PS5.</p>
-      <a class="go" href="https://link.amazon/B007Cb469" target="_blank" rel="noopener sponsored" aria-label="View Sony BRAVIA 5 98&Prime; Mini LED 4K Google TV on Amazon">View on Amazon</a>
+      <a class="go" href="https://link.amazon/B007Cb469" target="_blank" rel="noopener sponsored" aria-label="View Sony BRAVIA 5 98&Prime; Mini LED 4K Google TV on Amazon">Get this deal</a>
     </article>
 
     <article class="card" data-cat="essentials">
@@ -443,7 +451,7 @@ footer p { margin: 0; }
       <div class="meta"><span class="cat">Everyday essentials</span><span class="found">Found Nov 11</span></div>
       <h2>Bounty Essentials Paper Towels, 6 Double Rolls</h2>
       <p>Stock up on household basics. Check the page for Subscribe &amp; Save and order-size savings.</p>
-      <a class="go" href="https://link.amazon/B01jEwOKe" target="_blank" rel="noopener sponsored" aria-label="View Bounty Essentials Paper Towels, 6 Double Rolls on Amazon">View on Amazon</a>
+      <a class="go" href="https://link.amazon/B01jEwOKe" target="_blank" rel="noopener sponsored" aria-label="View Bounty Essentials Paper Towels, 6 Double Rolls on Amazon">Get this deal</a>
     </article>
 
     <article class="card" data-cat="essentials">
@@ -451,7 +459,7 @@ footer p { margin: 0; }
       <div class="meta"><span class="cat">Everyday essentials</span><span class="found">Found Nov 11</span></div>
       <h2>Celsius Spritz Vibe Sparkling Limoncello Twist, 12-Pack</h2>
       <p>Zero sugar. Check the page for a coupon and Subscribe &amp; Save.</p>
-      <a class="go" href="https://link.amazon/B096PtZXY" target="_blank" rel="noopener sponsored" aria-label="View Celsius Spritz Vibe Sparkling Limoncello Twist, 12-Pack on Amazon">View on Amazon</a>
+      <a class="go" href="https://link.amazon/B096PtZXY" target="_blank" rel="noopener sponsored" aria-label="View Celsius Spritz Vibe Sparkling Limoncello Twist, 12-Pack on Amazon">Get this deal</a>
     </article>
 
     <article class="card" data-cat="essentials">
@@ -459,7 +467,7 @@ footer p { margin: 0; }
       <div class="meta"><span class="cat">Everyday essentials</span><span class="found">Found Nov 11</span></div>
       <h2>Scott ComfortPlus Toilet Paper, 48 Triple Rolls</h2>
       <p>Stock up on everyday essentials. Look for Subscribe &amp; Save and a first-delivery coupon.</p>
-      <a class="go" href="https://link.amazon/B0dU6pd44" target="_blank" rel="noopener sponsored" aria-label="View Scott ComfortPlus Toilet Paper, 48 Triple Rolls on Amazon">View on Amazon</a>
+      <a class="go" href="https://link.amazon/B0dU6pd44" target="_blank" rel="noopener sponsored" aria-label="View Scott ComfortPlus Toilet Paper, 48 Triple Rolls on Amazon">Get this deal</a>
     </article>
 
     <article class="card" data-cat="home">
@@ -467,7 +475,7 @@ footer p { margin: 0; }
       <div class="meta"><span class="cat">Home</span><span class="found">Found Nov 11</span></div>
       <h2>Stanley 40 oz Tumbler with Straw, Peony Pink</h2>
       <p>Double-wall insulated and cup-holder friendly.</p>
-      <a class="go" href="https://link.amazon/B08EhD36t" target="_blank" rel="noopener sponsored" aria-label="View Stanley 40 oz Tumbler with Straw, Peony Pink on Amazon">View on Amazon</a>
+      <a class="go" href="https://link.amazon/B08EhD36t" target="_blank" rel="noopener sponsored" aria-label="View Stanley 40 oz Tumbler with Straw, Peony Pink on Amazon">Get this deal</a>
     </article>
 
     <article class="card" data-cat="home">
@@ -475,7 +483,7 @@ footer p { margin: 0; }
       <div class="meta"><span class="cat">Home</span><span class="found">Found Nov 11</span></div>
       <h2>FreAire Large Room Air Purifier (HAP605)</h2>
       <p>HEPA filtration for rooms up to 2,600 sq ft, with a quiet 20 dB sleep mode. Great for homes with pets.</p>
-      <a class="go" href="https://link.amazon/B01Cx6gDX" target="_blank" rel="noopener sponsored" aria-label="View FreAire Large Room Air Purifier (HAP605) on Amazon">View on Amazon</a>
+      <a class="go" href="https://link.amazon/B01Cx6gDX" target="_blank" rel="noopener sponsored" aria-label="View FreAire Large Room Air Purifier (HAP605) on Amazon">Get this deal</a>
     </article>
 
     <article class="card" data-cat="home">
@@ -483,7 +491,7 @@ footer p { margin: 0; }
       <div class="meta"><span class="cat">Home</span><span class="found">Found Nov 11</span></div>
       <h2>Dyson V9 Motorbar Cordless Vacuum</h2>
       <p>Cordless convenience and powerful everyday cleaning.</p>
-      <a class="go" href="https://link.amazon/B0gBLKzkj" target="_blank" rel="noopener sponsored" aria-label="View Dyson V9 Motorbar Cordless Vacuum on Amazon">View on Amazon</a>
+      <a class="go" href="https://link.amazon/B0gBLKzkj" target="_blank" rel="noopener sponsored" aria-label="View Dyson V9 Motorbar Cordless Vacuum on Amazon">Get this deal</a>
     </article>
 
     <article class="card" data-cat="home">
@@ -491,7 +499,7 @@ footer p { margin: 0; }
       <div class="meta"><span class="cat">Home</span><span class="found">Found Nov 11</span></div>
       <h2>Taseven Extra-Large Electric Food Warming Mat</h2>
       <p>6 temperature settings and a 6-hour timer. Check the coupon box before checkout.</p>
-      <a class="go" href="https://link.amazon/B0gnbxJOu" target="_blank" rel="noopener sponsored" aria-label="View Taseven Extra-Large Electric Food Warming Mat on Amazon">View on Amazon</a>
+      <a class="go" href="https://link.amazon/B0gnbxJOu" target="_blank" rel="noopener sponsored" aria-label="View Taseven Extra-Large Electric Food Warming Mat on Amazon">Get this deal</a>
     </article>
 
     <article class="card" data-cat="home">
@@ -499,7 +507,7 @@ footer p { margin: 0; }
       <div class="meta"><span class="cat">Home</span><span class="found">Found Nov 10</span></div>
       <h2>Keurig K-Express Coffee Maker</h2>
       <p>3 brew sizes, a 42 oz removable reservoir and a strong brew feature.</p>
-      <a class="go" href="https://link.amazon/B0iN1YBnj" target="_blank" rel="noopener sponsored" aria-label="View Keurig K-Express Coffee Maker on Amazon">View on Amazon</a>
+      <a class="go" href="https://link.amazon/B0iN1YBnj" target="_blank" rel="noopener sponsored" aria-label="View Keurig K-Express Coffee Maker on Amazon">Get this deal</a>
     </article>
 
     <article class="card" data-cat="tech">
@@ -507,7 +515,7 @@ footer p { margin: 0; }
       <div class="meta"><span class="cat">Tech</span><span class="found">Found Nov 10</span></div>
       <h2>Lenovo V15 Business Laptop, 256GB SSD + 500GB HDD</h2>
       <p>15.6&Prime; Full HD display, 8GB DDR5 RAM and Wi-Fi 6.</p>
-      <a class="go" href="https://link.amazon/B05F9s3LB" target="_blank" rel="noopener sponsored" aria-label="View Lenovo V15 Business Laptop, 256GB SSD + 500GB HDD on Amazon">View on Amazon</a>
+      <a class="go" href="https://link.amazon/B05F9s3LB" target="_blank" rel="noopener sponsored" aria-label="View Lenovo V15 Business Laptop, 256GB SSD + 500GB HDD on Amazon">Get this deal</a>
     </article>
 
     <article class="card" data-cat="tech">
@@ -515,7 +523,7 @@ footer p { margin: 0; }
       <div class="meta"><span class="cat">Tech</span><span class="found">Found Nov 10</span></div>
       <h2>Lenovo V15 Business Laptop, 256GB SSD</h2>
       <p>15.6&Prime; Full HD display, 8GB DDR5 RAM and Wi-Fi 6.</p>
-      <a class="go" href="https://link.amazon/B06BymsmW" target="_blank" rel="noopener sponsored" aria-label="View Lenovo V15 Business Laptop, 256GB SSD on Amazon">View on Amazon</a>
+      <a class="go" href="https://link.amazon/B06BymsmW" target="_blank" rel="noopener sponsored" aria-label="View Lenovo V15 Business Laptop, 256GB SSD on Amazon">Get this deal</a>
     </article>
 
     <article class="card" data-cat="home">
@@ -523,7 +531,7 @@ footer p { margin: 0; }
       <div class="meta"><span class="cat">Home</span><span class="found">Found Nov 10</span></div>
       <h2>Ninja Kitchen System with BlendSense Technology</h2>
       <p>72 oz blender and 8-cup food processor, 1800 peak watts. Early Black Friday.</p>
-      <a class="go" href="https://link.amazon/B0hoHOfm7" target="_blank" rel="noopener sponsored" aria-label="View Ninja Kitchen System with BlendSense Technology on Amazon">View on Amazon</a>
+      <a class="go" href="https://link.amazon/B0hoHOfm7" target="_blank" rel="noopener sponsored" aria-label="View Ninja Kitchen System with BlendSense Technology on Amazon">Get this deal</a>
     </article>
 
     <article class="card" data-cat="tech">
@@ -531,7 +539,7 @@ footer p { margin: 0; }
       <div class="meta"><span class="cat">Tech</span><span class="found">Found Nov 10</span></div>
       <h2>Norton 360 Deluxe Antivirus, 1-Year</h2>
       <p>Protection for up to 3 devices with VPN, scam protection and 25 GB cloud backup. The subscription auto-renews.</p>
-      <a class="go" href="https://link.amazon/B01YOGvyV" target="_blank" rel="noopener sponsored" aria-label="View Norton 360 Deluxe Antivirus, 1-Year on Amazon">View on Amazon</a>
+      <a class="go" href="https://link.amazon/B01YOGvyV" target="_blank" rel="noopener sponsored" aria-label="View Norton 360 Deluxe Antivirus, 1-Year on Amazon">Get this deal</a>
     </article>
 
     <article class="card" data-cat="tech">
@@ -539,7 +547,7 @@ footer p { margin: 0; }
       <div class="meta"><span class="cat">Tech</span><span class="found">Found Nov 10</span></div>
       <h2>Ring Doorbell 2K</h2>
       <p>A 2K video doorbell. Open the Amazon page for the exact model and today&rsquo;s price.</p>
-      <a class="go" href="https://link.amazon/B0h6zIEGq" target="_blank" rel="noopener sponsored" aria-label="View Ring Doorbell 2K on Amazon">View on Amazon</a>
+      <a class="go" href="https://link.amazon/B0h6zIEGq" target="_blank" rel="noopener sponsored" aria-label="View Ring Doorbell 2K on Amazon">Get this deal</a>
     </article>
 
     <article class="card" data-cat="tech">
@@ -547,7 +555,7 @@ footer p { margin: 0; }
       <div class="meta"><span class="cat">Tech</span><span class="found">Found Nov 10</span></div>
       <h2>Sony WH-CH720N Wireless Noise-Canceling Headphones, Pink</h2>
       <p>Noise canceling with up to 35 hours of battery life, lightweight and comfortable.</p>
-      <a class="go" href="https://www.amazon.com/Sony-WH-CH720N-Canceling-Headphones-Microphone/dp/B0DY8TS92J?pd_rd_w=HC2YL&amp;content-id=amzn1.sym.6f338059-300e-4ff9-ba1b-47eff0c46199&amp;pf_rd_p=6f338059-300e-4ff9-ba1b-47eff0c46199&amp;pf_rd_r=E62V08XQG7AJAJP6P8VP&amp;pd_rd_wg=EXLgr&amp;pd_rd_r=dd44517f-7576-4652-a386-46446a853f9c&amp;pd_rd_i=B0DY8TS92J&amp;th=1&amp;linkCode=ll2&amp;tag=dealsgotreal-20&amp;linkId=3a827ebb4de8e45c108cf13aba4c0143&amp;language=en_US&amp;gaOptInStatus=true&amp;ref_=as_li_ss_tl" target="_blank" rel="noopener sponsored" aria-label="View Sony WH-CH720N Wireless Noise-Canceling Headphones, Pink on Amazon">View on Amazon</a>
+      <a class="go" href="https://www.amazon.com/Sony-WH-CH720N-Canceling-Headphones-Microphone/dp/B0DY8TS92J?pd_rd_w=HC2YL&amp;content-id=amzn1.sym.6f338059-300e-4ff9-ba1b-47eff0c46199&amp;pf_rd_p=6f338059-300e-4ff9-ba1b-47eff0c46199&amp;pf_rd_r=E62V08XQG7AJAJP6P8VP&amp;pd_rd_wg=EXLgr&amp;pd_rd_r=dd44517f-7576-4652-a386-46446a853f9c&amp;pd_rd_i=B0DY8TS92J&amp;th=1&amp;linkCode=ll2&amp;tag=dealsgotreal-20&amp;linkId=3a827ebb4de8e45c108cf13aba4c0143&amp;language=en_US&amp;gaOptInStatus=true&amp;ref_=as_li_ss_tl" target="_blank" rel="noopener sponsored" aria-label="View Sony WH-CH720N Wireless Noise-Canceling Headphones, Pink on Amazon">Get this deal</a>
     </article>
 
     <article class="card" data-cat="home">
@@ -555,7 +563,7 @@ footer p { margin: 0; }
       <div class="meta"><span class="cat">Home</span><span class="found">Found Nov 10</span></div>
       <h2>Chefman TurboFry 6-Qt Air Fryer</h2>
       <p>Family-size 6-quart basket, up to 450&deg;F for extra crispy results with less oil.</p>
-      <a class="go" href="https://www.amazon.com/Chefman-Air-Fryer-Technology-Touchscreen/dp/B0CNY1YVDD?pd_rd_w=bjuK2&amp;content-id=amzn1.sym.6f338059-300e-4ff9-ba1b-47eff0c46199&amp;pf_rd_p=6f338059-300e-4ff9-ba1b-47eff0c46199&amp;pf_rd_r=P17CYHV68H6VEDJWP98B&amp;pd_rd_wg=ouUsH&amp;pd_rd_r=d2852070-388d-48d5-ae30-23c5e01e12ab&amp;pd_rd_i=B0CNY1YVDD&amp;th=1&amp;linkCode=ll2&amp;tag=dealsgotreal-20&amp;linkId=2a3261e6f49e678449142d2b8e7163e9&amp;language=en_US&amp;gaOptInStatus=true&amp;ref_=as_li_ss_tl" target="_blank" rel="noopener sponsored" aria-label="View Chefman TurboFry 6-Qt Air Fryer on Amazon">View on Amazon</a>
+      <a class="go" href="https://www.amazon.com/Chefman-Air-Fryer-Technology-Touchscreen/dp/B0CNY1YVDD?pd_rd_w=bjuK2&amp;content-id=amzn1.sym.6f338059-300e-4ff9-ba1b-47eff0c46199&amp;pf_rd_p=6f338059-300e-4ff9-ba1b-47eff0c46199&amp;pf_rd_r=P17CYHV68H6VEDJWP98B&amp;pd_rd_wg=ouUsH&amp;pd_rd_r=d2852070-388d-48d5-ae30-23c5e01e12ab&amp;pd_rd_i=B0CNY1YVDD&amp;th=1&amp;linkCode=ll2&amp;tag=dealsgotreal-20&amp;linkId=2a3261e6f49e678449142d2b8e7163e9&amp;language=en_US&amp;gaOptInStatus=true&amp;ref_=as_li_ss_tl" target="_blank" rel="noopener sponsored" aria-label="View Chefman TurboFry 6-Qt Air Fryer on Amazon">Get this deal</a>
     </article>
 
     <article class="card" data-cat="home">
@@ -563,7 +571,7 @@ footer p { margin: 0; }
       <div class="meta"><span class="cat">Home</span><span class="found">Found Nov 10</span></div>
       <h2>Yankee Candle Large Jar</h2>
       <p>A cozy pick for fall and holiday gifting. Open the Amazon page to see scents.</p>
-      <a class="go" href="https://link.amazon/B05Fp6CLO" target="_blank" rel="noopener sponsored" aria-label="View Yankee Candle Large Jar on Amazon">View on Amazon</a>
+      <a class="go" href="https://link.amazon/B05Fp6CLO" target="_blank" rel="noopener sponsored" aria-label="View Yankee Candle Large Jar on Amazon">Get this deal</a>
     </article>
   </section>
 
@@ -571,6 +579,7 @@ footer p { margin: 0; }
   <p class="empty" id="empty" hidden>No deals match that yet.</p>
 
   <footer>
+    <p class="tag">Made with love by Deals Got Real. Real deals. Unreal steals.</p>
     <p>As an Amazon Associate I earn from qualifying purchases. Prices and coupons change. The price shown on Amazon at checkout is the one that counts. Checkout happens on Amazon.</p>
     <p>Deals Got Real is not affiliated with the brands listed. Product names belong to their owners. Deals found Nov 10&ndash;14, 2026; this page was last updated Nov 14, 2026.</p>
   </footer>
@@ -579,7 +588,7 @@ footer p { margin: 0; }
 <!--ASSIST-->
 <button class="helper-btn" id="helperBtn" type="button" aria-expanded="false" aria-controls="helper">
   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a8 8 0 01-11.6 7.1L4 20l1.1-4.6A8 8 0 1121 12z"/><path d="M9 11.5h.01M12 11.5h.01M15 11.5h.01"/></svg>
-  Ask DealFinder
+  Find me a deal
 </button>
 <section class="helper" id="helper" role="dialog" aria-label="DealFinder chat" hidden>
   <div class="h-head">
@@ -733,7 +742,7 @@ footer p { margin: 0; }
     card.setAttribute('data-title', title.toLowerCase() + ' ' + card.querySelector('p').textContent.toLowerCase());
     if (i < 6) {
       var m = card.querySelector('.cat');
-      var b = document.createElement('span'); b.className = 'new-badge'; b.textContent = 'NEW';
+      var b = document.createElement('span'); b.className = 'new-badge'; b.textContent = 'FRESH FIND';
       m.appendChild(b);
     }
     var h = document.createElement('button');
@@ -778,7 +787,7 @@ footer p { margin: 0; }
     countEl.textContent = shown + (shown === 1 ? ' deal' : ' deals');
     emptyEl.hidden = shown !== 0;
     if (shown === 0 && filter === 'saved' && !term) emptyEl.textContent = 'Tap the heart on any deal to save it here.';
-    else if (shown === 0) emptyEl.textContent = 'No deals match that yet. Try another search or tap All deals.';
+    else if (shown === 0) emptyEl.textContent = 'Hmm, nothing yet. Try another word, or ask DealFinder.';
   }
 
   chips.forEach(function (chip) {
@@ -896,7 +905,7 @@ footer p { margin: 0; }
       var body = document.createElement('div'); body.className = 'pick-body';
       var t = document.createElement('div'); t.className = 'pick-t'; t.textContent = d.title;
       var act = document.createElement('div'); act.className = 'pick-a';
-      var a = document.createElement('a'); a.href = d.url; a.target = '_blank'; a.rel = 'noopener sponsored'; a.textContent = 'View on Amazon';
+      var a = document.createElement('a'); a.href = d.url; a.target = '_blank'; a.rel = 'noopener sponsored'; a.textContent = 'Get this deal';
       a.setAttribute('aria-label', 'View ' + d.title + ' on Amazon');
       var b = document.createElement('button'); b.type = 'button'; b.textContent = 'Show on page';
       b.addEventListener('click', function () { focusCard(d); });
@@ -944,12 +953,12 @@ footer p { margin: 0; }
       return { reply: 'Yes. I earn a small commission from qualifying Amazon purchases made through the links on this page, at no extra cost to you. As an Amazon Associate I earn from qualifying purchases.', picks: [] };
     if (has(t, /(price|how much|cost|cheap|cheaper|worth it|price history|lowest|budget|afford|discount|sale)/) && !has(t, /(gift basket)/)) {
       var m = rank(text.replace(/price|cheap|cheaper|cost|how much|worth it|budget|afford|discount|sale/gi, ''), 3);
-      return { reply: 'I can\'t see live prices, because Amazon prices change all the time. Tap View on Amazon to see today\'s price plus any on-page coupon or Subscribe & Save option. A price-history tracker like Keepa or CamelCamelCamel can also show whether now is a good time to buy.', picks: m };
+      return { reply: 'I can\'t see live prices, because Amazon prices change all the time. Tap Get this deal to see today\'s price plus any on-page coupon or Subscribe & Save option. A price-history tracker like Keepa or CamelCamelCamel can also show whether now is a good time to buy.', picks: m };
     }
     if (has(t, /(coupon|promo|code|clip)/))
       return { reply: 'Some deals have an on-page coupon box or a promo code, so look on the Amazon page before you check out. The gift basket currently lists the code CLXKBLN4, which may expire.', picks: rank('gift basket', 1) };
     if (has(t, /(how (do|does|to)|ship|delivery|checkout|check out|return|refund|order|pay|where do i buy|buy)/) && !has(t, /(gift|for (my|a|the))/))
-      return { reply: 'Tap View on Amazon on any deal. You will check out, pay and get shipping and returns directly from Amazon, so everything works just like a normal Amazon order.', picks: [] };
+      return { reply: 'Tap Get this deal on any deal. You will check out, pay and get shipping and returns directly from Amazon, so everything works just like a normal Amazon order.', picks: [] };
     if (has(t, /(new|latest|newest|today|recent|just (posted|added)|fresh|what s up|whats up)/) && !rank(t.replace(/\b(new|latest|newest|today|recent|just|posted|added|fresh)\b/g, ''), 1).length)
       return { reply: 'Here are the newest deals:', picks: deals.slice(0, 4) };
     var catWord = has(t, /\bbeauty\b/) ? 'beauty' : has(t, /\bbaby\b/) && t.split(' ').length <= 3 ? 'baby' : has(t, /^(tech|technology|electronics)\b/) ? 'tech' : has(t, /^(home|house)\b/) ? 'home' : '';
@@ -966,7 +975,7 @@ footer p { margin: 0; }
   }
 
   function greet() {
-    say('Hi! I\'m DealFinder, the Deals Got Real shopping assistant. Tell me what you are shopping for, or who you are buying for, and I\'ll point you to deals on this page.', 'bot');
+    say('Hi, I\'m DealFinder! Tell me what you\'re shopping for or who you\'re buying for, and I\'ll dig up the best match.', 'bot');
     setChips(['Gift ideas', 'Robot vacuum', 'Headphones', 'What\'s new?', 'Do you earn commission?']);
   }
 
@@ -1010,7 +1019,7 @@ footer p { margin: 0; }
   window.DGRassistant = { ask: ask, local: localReply, deals: deals };
 })();
 
-(function(){var q=document.getElementById('q');if(!q)return;var ex=['vacuum','gift for mom','headphones','perfume','laptop','air fryer','baby'],i=0;
+(function(){var q=document.getElementById('q');if(!q)return;var ex=['','gift for mom','robot vacuum','headphones','perfume','laptop','air fryer','baby'],base=q.placeholder,i=0;
 if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
-setInterval(function(){if(q.value||document.activeElement===q)return;i=(i+1)%ex.length;q.placeholder='Try: '+ex[i];},2500);})();
+setInterval(function(){if(q.value||document.activeElement===q)return;i=(i+1)%ex.length;q.placeholder=i?'Try: '+ex[i]:base;},2500);})();
 </script>
