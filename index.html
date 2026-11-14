@@ -195,6 +195,15 @@ footer p { margin: 0; }
 .h-fine { padding: 0 14px 10px; font-size: 10.5px; color: var(--muted); line-height: 1.4; }
 @media (max-width: 520px) { .helper { right: 8px; left: 8px; bottom: calc(64px + env(safe-area-inset-bottom, 0px)); width: auto; height: min(70dvh, 620px); } }
 @media (prefers-reduced-motion: reduce) { .card.flash { animation: none; outline: 3px solid var(--blush); } }
+
+/* Extra filters */
+.opts { display: flex; flex-wrap: wrap; gap: 10px 14px; align-items: center; margin-top: -14px; }
+.opts label { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: var(--muted); }
+.opts select { font: inherit; font-size: 13.5px; font-weight: 600; color: var(--ink); background: var(--surface); border: 1.5px solid var(--line); border-radius: 999px; padding: 7px 28px 7px 12px; cursor: pointer; }
+.opts .tog { font: inherit; font-size: 13px; font-weight: 600; cursor: pointer; padding: 7px 13px; border-radius: 999px; border: 1.5px solid var(--line); background: var(--surface); color: var(--ink); }
+.opts .tog[aria-pressed="true"] { background: var(--blush); border-color: var(--blush); color: #fff; }
+.opts .reset { font: inherit; font-size: 13px; font-weight: 700; color: var(--cta); background: none; border: 0; cursor: pointer; text-decoration: underline; }
+.opts .reset[hidden] { display: none; }
 </style>
 
 <div class="bg" id="bg" aria-hidden="true"></div>
@@ -226,6 +235,14 @@ footer p { margin: 0; }
       <button class="s-clear" id="sClear" type="button" aria-label="Clear search" hidden>&times;</button>
     </div>
     <span class="count" id="count" aria-live="polite"></span>
+  </div>
+
+    <div class="opts" role="group" aria-label="More filters">
+    <label>Sort <select id="fSort"><option value="new">Newest first</option><option value="old">Oldest first</option><option value="az">A to Z</option></select></label>
+    <label>Found <select id="fWhen"><option value="any">Any time</option><option value="0">Today</option><option value="2">Last 3 days</option><option value="6">Last 7 days</option></select></label>
+    <button class="tog" type="button" id="fGift" aria-pressed="false">Gift ideas</button>
+    <button class="tog" type="button" id="fCoupon" aria-pressed="false">Coupon or promo</button>
+    <button class="reset" type="button" id="fReset" hidden>Reset filters</button>
   </div>
 
   <section class="grid" aria-label="Deals">
@@ -646,6 +663,52 @@ footer p { margin: 0; }
   window.DGRnorm = norm;
 })();
 </script>
+<script id="dgr-filters">
+(function () {
+  var MON = { Jan:0, Feb:1, Mar:2, Apr:3, May:4, Jun:5, Jul:6, Aug:7, Sep:8, Oct:9, Nov:10, Dec:11 };
+  var sort = 'new', when = 'any', gift = false, coupon = false, info = null;
+  function startOfDay(d) { return new Date(d.getFullYear(), d.getMonth(), d.getDate()).getTime(); }
+  function days(card) {
+    var m = /Found (\w{3}) (\d+)/.exec(card.querySelector('.found').textContent);
+    if (!m) return 999;
+    var now = new Date(), y = now.getFullYear(), d = new Date(y, MON[m[1]], +m[2]);
+    if (d > now) d = new Date(y - 1, MON[m[1]], +m[2]);
+    return Math.round((startOfDay(now) - startOfDay(d)) / 86400000);
+  }
+  window.DGRextra = function (card) {
+    if (when !== 'any' && days(card) > +when) return false;
+    var txt = card.getAttribute('data-title') || '';
+    if (gift && !window.DGRmatch('gift', txt + ' ' + card.getAttribute('data-cat'))) return false;
+    if (coupon && !/coupon|promo/.test(txt)) return false;
+    return true;
+  };
+  function reorder() {
+    var cards = Array.prototype.slice.call(document.querySelectorAll('.card'));
+    if (!info) info = cards.map(function (c, i) { return { i: i, t: c.querySelector('h2').textContent.toLowerCase() }; });
+    var order = info.slice();
+    if (sort === 'old') order.reverse();
+    if (sort === 'az') order.sort(function (a, b) { return a.t < b.t ? -1 : a.t > b.t ? 1 : 0; });
+    order.forEach(function (o, pos) { cards[o.i].style.order = pos; });
+    document.querySelector('.grid').style.display = 'grid';
+  }
+  document.addEventListener('DOMContentLoaded', function () {
+    var q = document.getElementById('q');
+    var fs = document.getElementById('fSort'), fw = document.getElementById('fWhen'), fg = document.getElementById('fGift'), fc = document.getElementById('fCoupon'), fr = document.getElementById('fReset');
+    function changed() {
+      fr.hidden = sort === 'new' && when === 'any' && !gift && !coupon;
+      reorder(); q.dispatchEvent(new Event('input'));
+    }
+    fs.addEventListener('change', function () { sort = fs.value; changed(); });
+    fw.addEventListener('change', function () { when = fw.value; changed(); });
+    fg.addEventListener('click', function () { gift = !gift; fg.setAttribute('aria-pressed', gift); changed(); });
+    fc.addEventListener('click', function () { coupon = !coupon; fc.setAttribute('aria-pressed', coupon); changed(); });
+    fr.addEventListener('click', function () {
+      sort = 'new'; when = 'any'; gift = coupon = false; fs.value = 'new'; fw.value = 'any';
+      fg.setAttribute('aria-pressed', 'false'); fc.setAttribute('aria-pressed', 'false'); changed();
+    });
+  });
+})();
+</script>
 <script>
 (function () {
   var chips = document.querySelectorAll('.chip');
@@ -701,7 +764,8 @@ footer p { margin: 0; }
     cards.forEach(function (card) {
       var title = card.querySelector('h2').textContent;
       var okCat = filter === 'all' || (filter === 'saved' ? !!saved[title] : card.getAttribute('data-cat') === filter);
-      var okQ = !term || window.DGRmatch(term, card.getAttribute('data-title') + ' ' + card.getAttribute('data-cat'));
+      var okX = window.DGRextra ? window.DGRextra(card) : true;
+      var okQ = okX && (!term || window.DGRmatch(term, card.getAttribute('data-title') + ' ' + card.getAttribute('data-cat')));
       var show = okCat && okQ;
       card.hidden = !show;
       if (show) shown++;
