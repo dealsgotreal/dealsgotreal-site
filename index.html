@@ -222,26 +222,10 @@ footer p { margin: 0; }
   <div class="tools-row">
     <div class="searchbox">
       <svg class="s-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
-      <input class="search" id="q" type="search" placeholder="Search deals, like vacuum or gift for mom" aria-label="Search deals" autocomplete="off" enterkeyhint="search">
+      <input class="search" id="q" type="search" placeholder="Try: vacuum" aria-label="Search deals" autocomplete="off" enterkeyhint="search">
       <button class="s-clear" id="sClear" type="button" aria-label="Clear search" hidden>&times;</button>
     </div>
     <span class="count" id="count" aria-live="polite"></span>
-  </div>
-  <div class="try">Try:
-    <button type="button" data-q="gift">gift</button>
-    <button type="button" data-q="vacuum">vacuum</button>
-    <button type="button" data-q="headphones">headphones</button>
-    <button type="button" data-q="perfume">perfume</button>
-    <button type="button" data-q="laptop">laptop</button>
-    <button type="button" data-q="baby">baby</button>
-  </div>
-  <div class="try">Try:
-    <button type="button" data-q="gift">gift</button>
-    <button type="button" data-q="vacuum">vacuum</button>
-    <button type="button" data-q="headphones">headphones</button>
-    <button type="button" data-q="perfume">perfume</button>
-    <button type="button" data-q="laptop">laptop</button>
-    <button type="button" data-q="baby">baby</button>
   </div>
 
   <section class="grid" aria-label="Deals">
@@ -956,4 +940,8 @@ footer p { margin: 0; }
   form.addEventListener('submit', function (e) { e.preventDefault(); var v = input.value; input.value = ''; ask(v); });
   window.DGRassistant = { ask: ask, local: localReply, deals: deals };
 })();
+
+(function(){var q=document.getElementById('q');if(!q)return;var ex=['vacuum','gift for mom','headphones','perfume','laptop','air fryer','baby'],i=0;
+if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+setInterval(function(){if(q.value||document.activeElement===q)return;i=(i+1)%ex.length;q.placeholder='Try: '+ex[i];},2500);})();
 </script>
