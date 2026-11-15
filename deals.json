@@ -1,5 +1,125 @@
 [
  {
+  "id": "emeril",
+  "category": "home",
+  "title": "Emeril Lagasse French Door Air Fryer Toaster Oven",
+  "description": "Large oven with a window to watch food cook and preset functions like air fry, bake, broil and rotisserie."
+ },
+ {
+  "id": "lv_metis",
+  "category": "fashion",
+  "title": "Louis Vuitton Pre-Loved Pochette Metis East West, Brown",
+  "description": "Pre-loved designer bag, listed in very good condition. Open the page for full condition details."
+ },
+ {
+  "id": "lv_montsouris",
+  "category": "fashion",
+  "title": "Louis Vuitton Pre-Loved Montsouris NM Backpack PM, Brown",
+  "description": "Pre-loved designer backpack, listed in very good condition. Open the page for full condition details."
+ },
+ {
+  "id": "hermes",
+  "category": "fashion",
+  "title": "Hermès Pre-Loved Picotin Lock Bag GM, Vert Bosphore",
+  "description": "Pre-loved designer bag in Vert Bosphore. Open the page for condition details."
+ },
+ {
+  "id": "lv_neverfull",
+  "category": "fashion",
+  "title": "Louis Vuitton Pre-Loved Neverfull Tote MM, Brown",
+  "description": "Pre-loved designer tote, listed in good condition. Open the page for full condition details."
+ },
+ {
+  "id": "lv_malle",
+  "category": "fashion",
+  "title": "Louis Vuitton Pre-Loved Petite Malle Handbag, Black",
+  "description": "Pre-loved designer handbag, listed in very good condition. Open the page for full condition details."
+ },
+ {
+  "id": "logimouse",
+  "category": "tech",
+  "title": "Logitech M240 Silent Bluetooth Wireless Mouse, Graphite",
+  "description": "Quiet clicks, no USB receiver and up to 18 months of battery life. Works with PC and Mac."
+ },
+ {
+  "id": "garmin",
+  "category": "tech",
+  "title": "Garmin fēnix 8 Sapphire Multisport Smartwatch, 51mm",
+  "description": "AMOLED display, GPS, a built-in flashlight, speaker and mic. Dive-rated."
+ },
+ {
+  "id": "ninjacreami",
+  "category": "home",
+  "title": "Ninja Creami Scoop&Swirl Ice Cream Maker",
+  "description": "Make soft serve and scoopable ice cream at home. Amazon exclusive Bone & Champagne finish."
+ },
+ {
+  "id": "sharkflexstyle",
+  "category": "beauty",
+  "title": "Shark FlexStyle Air Multi-Styler & Drying System, Copper",
+  "description": "One twist switches between dryer and styler, with 4 heat and 3 airflow settings and a Cool Shot."
+ },
+ {
+  "id": "lego_fox",
+  "category": "home",
+  "title": "LEGO Creator 3-in-1 Forest Animals: Red Fox 31154",
+  "description": "A 667-piece set that builds three ways. Ages 9+. A fun gift or display piece."
+ },
+ {
+  "id": "traeger",
+  "category": "home",
+  "title": "Traeger Pro 22 Wood Pellet Grill & Smoker",
+  "description": "6-in-1 pellet grill: grill, smoke, bake, roast, braise and BBQ, with a meat probe and 18 lb hopper."
+ },
+ {
+  "id": "sharkflexfusion",
+  "category": "beauty",
+  "title": "Shark FlexFusion Ceramic Air Styler & Straightener",
+  "description": "Dryer, straightener and styling attachments in one, with Style-Safe tech and a scalp shield mode."
+ },
+ {
+  "id": "bissell",
+  "category": "home",
+  "title": "BISSELL Little Green Mini Portable Carpet Cleaner",
+  "description": "Portable spot cleaner for carpet, upholstery and car interiors, with a self-cleaning HydroRinse tool."
+ },
+ {
+  "id": "pajamas",
+  "category": "fashion",
+  "title": "Amazon Essentials Men’s Cotton-Modal Pajama Set",
+  "description": "Soft long-sleeve button-down top with matching pants. A cozy gift idea."
+ },
+ {
+  "id": "dyson_travel",
+  "category": "beauty",
+  "title": "Dyson Supersonic Travel Hair Dryer",
+  "description": "Travel-size Dyson dryer, shown with attachments, a leave-in conditioning spray and a storage bag."
+ },
+ {
+  "id": "s26fe",
+  "category": "tech",
+  "title": "Samsung Galaxy S26 FE Unlocked Phone, Graphite, 128GB",
+  "description": "Unlocked phone with Galaxy AI, a 50MP camera and a 4,900 mAh battery."
+ },
+ {
+  "id": "kitchenaid",
+  "category": "home",
+  "title": "KitchenAid Artisan 5-Qt Tilt-Head Stand Mixer, Juniper",
+  "description": "5-quart mixer with a pouring shield. Shown in Juniper, with several colors to pick from."
+ },
+ {
+  "id": "slipper",
+  "category": "fashion",
+  "title": "Fireside by Dearfoams Women’s Sydney Shearling Slipper",
+  "description": "Cozy shearling-trimmed indoor and outdoor scuff slipper, available in wide widths."
+ },
+ {
+  "id": "lego_santa",
+  "category": "home",
+  "title": "LEGO Up-Scaled Santa Minifigure 40820",
+  "description": "A 761-piece build-it-yourself Santa to display for Christmas. Ages 10+."
+ },
+ {
   "id": "nutribullet",
   "category": "home",
   "title": "nutribullet Turbo Tumbler Edition Personal Blender, Dune Beige",
