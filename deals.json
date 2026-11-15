@@ -1,5 +1,23 @@
 [
  {
+  "id": "nutribullet",
+  "category": "home",
+  "title": "nutribullet Turbo Tumbler Edition Personal Blender, Dune Beige",
+  "description": "1000-watt personal blender with a 24 oz tumbler cup, nonslip silicone boot and a leak-proof to-go lid."
+ },
+ {
+  "id": "samsungtv",
+  "category": "tech",
+  "title": "Samsung 65-Inch M70H Series Mini LED 4K Smart TV (2026 Model)",
+  "description": "Mini LED 4K picture, 120Hz motion and a smart TV built in. Look for the on-page promo and try code 521C760F at checkout while it lasts."
+ },
+ {
+  "id": "beats",
+  "category": "tech",
+  "title": "Beats Solo 4 On-Ear Wireless Headphones, Cloud Pink",
+  "description": "Up to 50 hours of battery, spatial audio and USB-C fast charging. Works with Apple and Android."
+ },
+ {
   "id": "giftbasket",
   "category": "beauty",
   "title": "BodyRefresh Self-Care Gift Basket",

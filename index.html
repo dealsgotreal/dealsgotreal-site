@@ -209,6 +209,20 @@ footer p { margin: 0; }
 .season { background: var(--blush-soft); color: var(--brand); border-radius: 12px; padding: 11px 16px; font-size: 14px; }
 .season strong { font-weight: 800; }
 footer .tag { font-size: 12.5px; font-weight: 700; color: var(--brand); }
+
+/* Past deals (auto-archived after 7 days) */
+.past { margin-top: 8px; border-top: 2px solid var(--line); padding-top: 14px; }
+.past[hidden] { display: none; }
+.past summary { cursor: pointer; font-weight: 700; color: var(--brand); font-size: 15px; }
+.past-note { font-size: 13px; color: var(--muted); margin: 8px 0 14px; }
+.pgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr)); gap: 14px; }
+.pcard { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 14px; display: flex; flex-direction: column; gap: 8px; min-width: 0; opacity: .72; }
+.pcard .pic img { filter: grayscale(1); opacity: .8; }
+.pcard h2 { margin: 0; font-size: 15px; line-height: 1.3; color: var(--brand); }
+.pcard p { display: none; }
+.pcard .meta { display: flex; justify-content: space-between; gap: 12px; font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+.pcard .cat { color: var(--blush); } .pcard .found { color: var(--muted); }
+.ended { font-size: 12.5px; font-weight: 700; color: var(--muted); }
 </style>
 
 <div class="bg" id="bg" aria-hidden="true"></div>
@@ -254,6 +268,30 @@ footer .tag { font-size: 12.5px; font-weight: 700; color: var(--brand); }
   </div>
 
   <section class="grid" aria-label="Deals">
+    <article class="card" data-cat="home">
+      <div class="pic"><img src="images/nutribullet.jpg" alt="" loading="lazy" decoding="async"></div>
+      <div class="meta"><span class="cat">Home</span><span class="found">Found Nov 14</span></div>
+      <h2>nutribullet Turbo Tumbler Edition Personal Blender, Dune Beige</h2>
+      <p>1000-watt personal blender with a 24 oz tumbler cup, nonslip silicone boot and a leak-proof to-go lid.</p>
+      <a class="go" href="https://link.amazon/B009TJzFj" target="_blank" rel="noopener sponsored" aria-label="View nutribullet Turbo Tumbler Edition Personal Blender, Dune Beige on Amazon">Get this deal</a>
+    </article>
+
+    <article class="card" data-cat="tech">
+      <div class="pic"><img src="images/samsungtv.jpg" alt="" loading="lazy" decoding="async"></div>
+      <div class="meta"><span class="cat">Tech</span><span class="found">Found Nov 14</span></div>
+      <h2>Samsung 65-Inch M70H Series Mini LED 4K Smart TV (2026 Model)</h2>
+      <p>Mini LED 4K picture, 120Hz motion and a smart TV built in. Look for the on-page promo and try code 521C760F at checkout while it lasts.</p>
+      <a class="go" href="https://link.amazon/B0c544RfQ" target="_blank" rel="noopener sponsored" aria-label="View Samsung 65-Inch M70H Series Mini LED 4K Smart TV (2026 Model) on Amazon">Get this deal</a>
+    </article>
+
+    <article class="card" data-cat="tech">
+      <div class="pic"><img src="images/beats.jpg" alt="" loading="lazy" decoding="async"></div>
+      <div class="meta"><span class="cat">Tech</span><span class="found">Found Nov 14</span></div>
+      <h2>Beats Solo 4 On-Ear Wireless Headphones, Cloud Pink</h2>
+      <p>Up to 50 hours of battery, spatial audio and USB-C fast charging. Works with Apple and Android.</p>
+      <a class="go" href="https://link.amazon/B0hV63FLj" target="_blank" rel="noopener sponsored" aria-label="View Beats Solo 4 On-Ear Wireless Headphones, Cloud Pink on Amazon">Get this deal</a>
+    </article>
+
     <article class="card" data-cat="beauty">
       <div class="pic"><img src="images/giftbasket.jpg" alt="" loading="lazy" decoding="async"></div>
       <div class="meta"><span class="cat">Beauty</span><span class="found">Found Nov 14</span></div>
@@ -721,6 +759,33 @@ footer .tag { font-size: 12.5px; font-weight: 700; color: var(--brand); }
       c.addEventListener('click', function () { fc.value = c.getAttribute('data-filter'); fr.hidden = fc.value === 'all' && sort === 'new' && when === 'any' && offer === 'any'; });
     });
   });
+})();
+</script>
+<script id="dgr-archive">
+(function () {
+  var MON = { Jan:0, Feb:1, Mar:2, Apr:3, May:4, Jun:5, Jul:6, Aug:7, Sep:8, Oct:9, Nov:10, Dec:11 };
+  function sod(d) { return new Date(d.getFullYear(), d.getMonth(), d.getDate()).getTime(); }
+  function age(card) {
+    var m = /Found (\w{3}) (\d+)/.exec(card.querySelector('.found').textContent);
+    if (!m) return 0;
+    var now = new Date(), y = now.getFullYear(), d = new Date(y, MON[m[1]], +m[2]);
+    if (d > now) d = new Date(y - 1, MON[m[1]], +m[2]);
+    return Math.round((sod(now) - sod(d)) / 86400000);
+  }
+  var grid = document.querySelector('.grid'); if (!grid) return;
+  var old = Array.prototype.slice.call(grid.querySelectorAll('.card')).filter(function (c) { return age(c) > 7; });
+  var det = document.createElement('details'); det.className = 'past'; det.id = 'past'; det.hidden = !old.length;
+  var sum = document.createElement('summary'); sum.textContent = 'Past deals (' + old.length + ')';
+  var note = document.createElement('p'); note.className = 'past-note'; note.textContent = 'These finds are more than 7 days old and may have ended. Check Amazon before you count on one.';
+  var pg = document.createElement('div'); pg.className = 'pgrid';
+  old.forEach(function (c) {
+    c.className = 'pcard';
+    var go = c.querySelector('a.go');
+    if (go) { var sp = document.createElement('span'); sp.className = 'ended'; sp.textContent = 'This deal may have ended'; go.replaceWith(sp); }
+    pg.appendChild(c);
+  });
+  det.appendChild(sum); det.appendChild(note); det.appendChild(pg);
+  grid.parentNode.insertBefore(det, document.getElementById('empty') || grid.nextSibling);
 })();
 </script>
 <script>
