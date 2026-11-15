@@ -1,5 +1,35 @@
 [
  {
+  "id": "duffle",
+  "category": "fashion",
+  "title": "Foldable 4-in-1 Travel Duffle Bag, 40L",
+  "description": "Carry-on weekender that converts to a backpack. Multi-pocket and water-resistant, in soft green."
+ },
+ {
+  "id": "cuisinart",
+  "category": "home",
+  "title": "Cuisinart 3-Piece Stainless Steel Mixing Bowl Set with Lids",
+  "description": "1.5, 3 and 5 qt bowls with matching lids. Nesting storage, fridge, freezer and dishwasher safe."
+ },
+ {
+  "id": "burp",
+  "category": "baby",
+  "title": "Muslin Burp Cloths 10-Pack",
+  "description": "Soft 6-layer 100% cotton burp cloths, 20 x 10 inches. Absorbent for drool and spit-up."
+ },
+ {
+  "id": "giftset",
+  "category": "beauty",
+  "title": "Spa Gift Basket with Tumbler, Blanket & Candle",
+  "description": "Ocean-breeze self-care box with a tumbler, plush blanket, cozy socks, candle and bath bomb. Easy gift for Christmas or get-well."
+ },
+ {
+  "id": "pasta",
+  "category": "home",
+  "title": "KitchenAid 3-Piece Pasta Roller & Cutter Set",
+  "description": "Roller plus spaghetti and fettuccine cutters that attach to KitchenAid stand mixers. Stainless steel with a cleaning brush."
+ },
+ {
   "id": "emeril",
   "category": "home",
   "title": "Emeril Lagasse French Door Air Fryer Toaster Oven",
