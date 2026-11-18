@@ -1,5 +1,71 @@
 [
  {
+  "id": "firestick",
+  "category": "tech",
+  "title": "Amazon Fire TV Stick 4K Plus",
+  "description": "4K streaming with Wi-Fi 6 and Alexa voice remote for Prime Video, Netflix and more."
+ },
+ {
+  "id": "acqua",
+  "category": "beauty",
+  "title": "Armani Beauty Acqua di Gioia Eau de Parfum Intense",
+  "description": "Fruity citrus floral with bergamot, jasmine and cedarwood. Long-lasting."
+ },
+ {
+  "id": "stanley30",
+  "category": "home",
+  "title": "Stanley Quencher H2.0 FlowState Tumbler, 30 oz, Ash",
+  "description": "Insulated stainless steel with handle, straw and 3-position lid. Fits most cup holders."
+ },
+ {
+  "id": "cloud6",
+  "category": "fashion",
+  "title": "On Women’s Cloud 6 Road Running Shoes",
+  "description": "Lightweight everyday sneaker with cushioned CloudTec sole."
+ },
+ {
+  "id": "puffer",
+  "category": "fashion",
+  "title": "Women’s Lightweight Packable Puffer Jacket, Black",
+  "description": "Warm, water-resistant quilted jacket that packs down for travel."
+ },
+ {
+  "id": "bjpkpk",
+  "category": "home",
+  "title": "Insulated Stainless Steel Tumbler with Straw and Lid",
+  "description": "Large travel tumbler that keeps drinks cold or hot, with a cleaning brush included."
+ },
+ {
+  "id": "bdcoffee",
+  "category": "home",
+  "title": "BLACK+DECKER 12-Cup Programmable Coffee Maker",
+  "description": "Digital clock and timer so coffee is ready when you wake up. Glass carafe."
+ },
+ {
+  "id": "idesign",
+  "category": "home",
+  "title": "Clear Stackable Storage Bins with Handles, 4-Pack",
+  "description": "Open-front organizers for the pantry, fridge, cabinets and closets."
+ },
+ {
+  "id": "towels",
+  "category": "home",
+  "title": "Striped Cotton Kitchen Towels, Set of 4",
+  "description": "Soft, absorbent terry towels in neutral stripes for the kitchen."
+ },
+ {
+  "id": "olixis",
+  "category": "home",
+  "title": "OLIXIS Cervical Memory Foam Neck Pillow",
+  "description": "Contoured pillow for side, back and stomach sleepers, with a cooling breathable cover."
+ },
+ {
+  "id": "nbpower",
+  "category": "home",
+  "title": "nutribullet Power Core Blender, 1400W, Matte Black",
+  "description": "Full-size 72-oz pitcher for smoothies, crushed ice and frozen fruit. Dishwasher-safe parts."
+ },
+ {
   "id": "duffle",
   "category": "fashion",
   "title": "Foldable 4-in-1 Travel Duffle Bag, 40L",
